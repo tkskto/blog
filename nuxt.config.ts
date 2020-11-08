@@ -109,9 +109,9 @@ const config: NuxtConfig = {
     build: {
         extractCSS: true,
         filenames: {
-            app: ({ isDev }): string => isDev ? 'js/[name].js' : 'js/[name].[chunkhash:8].js',
-            chunk: ({ isDev }): string => isDev ? 'js/[name].js' : 'js/[name].[chunkhash:8].js',
-            css: ({ isDev }): string => isDev ? 'css/[name].css' : 'css/[name].[contenthash].css',
+            app: ({ isDev }): string => isDev ? 'js/[name].js' : 'js/[name].js',
+            chunk: ({ isDev }): string => isDev ? 'js/[name].js' : 'js/[name].js',
+            css: ({ isDev }): string => isDev ? 'css/[name].css' : 'css/[name].css',
         },
         publicPath: '/blog/common/'
     },
