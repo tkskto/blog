@@ -1,0 +1,35 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "nuxt-ts build",
+    "generate": "nuxt-ts generate",
+    "start": "nuxt-ts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkskto/blog.git"
+  },
+  "author": "Takeshi Kato <tkskto@gmail.com> (https://github.com/tkskto)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tkskto/blog/issues"
+  },
+  "homepage": "https://tkskto.me/blog/",
+  "devDependencies": {
+    "@nuxt/types": "2.14.7",
+    "@nuxt/typescript-build": "2.0.3",
+    "@nuxtjs/sitemap": "2.4.0",
+    "@types/marked": "1.1.0",
+    "marked": "1.2.3",
+    "sass": "1.29.0",
+    "sass-loader": "10.0.5"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "2.0.0",
+    "@nuxtjs/google-analytics": "2.4.0",
+    "nuxt": "2.14.7"
+  }
+}
