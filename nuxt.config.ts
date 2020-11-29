@@ -4,12 +4,12 @@ import * as path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
 import marked from 'marked';
 const articles = JSON.parse(readFileSync(path.join(__dirname, './assets/articles.json'), 'utf-8')).reverse();
-const generateIndexRoute = (): {route:string, payload: {}} => {
+const generateIndexRoute = (forSitemap: boolean): {route:string, payload: {}} => {
     const newest = articles[0];
     const {title, date} = newest;
     const content = marked(readFileSync(`./assets/articles/${title}.md`, {encoding: 'utf-8'}));
     return {
-        route: '/blog',
+        route: forSitemap ? '/blog/' : '/blog',
         payload: {
             articles,
             title,
@@ -18,12 +18,12 @@ const generateIndexRoute = (): {route:string, payload: {}} => {
         }
     }
 }
-const generateArticlesRoutes = (): {route:string, payload: {}}[] => {
+const generateArticlesRoutes = (forSitemap: boolean): {route:string, payload: {}}[] => {
     return articles.map(item => {
         const {date, title} = item;
         const content = marked(readFileSync(`./assets/articles/${title}.md`, {encoding: 'utf-8'}));
         return {
-            route: `/blog/${title}`,
+            route: forSitemap ? `/blog/${title}/` : `/blog/${title}`,
             payload: {
                 articles,
                 title,
@@ -33,7 +33,7 @@ const generateArticlesRoutes = (): {route:string, payload: {}}[] => {
         };
     });
 }
-const generateCategoriesRoutes = (): {route:string, payload: {}}[] => {
+const generateCategoriesRoutes = (forSitemap: boolean): {route:string, payload: {}}[] => {
     const categories = {};
     const len = articles.length;
 
@@ -58,7 +58,7 @@ const generateCategoriesRoutes = (): {route:string, payload: {}}[] => {
 
     for (const key in categories) {
         routes.push({
-            route: `/blog/category/${key}`,
+            route: forSitemap ? `/blog/category/${key}/` : `/blog/category/${key}`,
             payload: {
                 articles,
                 categoryName: key,
@@ -69,10 +69,21 @@ const generateCategoriesRoutes = (): {route:string, payload: {}}[] => {
 
     return routes;
 }
+
 const generateDynamicRoutes = (callback): void => {
-    const index: {}[] = [generateIndexRoute()];
-    const articles = generateArticlesRoutes();
-    const categories = generateCategoriesRoutes();
+    const index: {}[] = [generateIndexRoute(false)];
+    const articles = generateArticlesRoutes(false);
+    const categories = generateCategoriesRoutes(false);
+
+    const routes = index.concat(articles, categories);
+
+    callback(null, routes);
+};
+
+const generateDynamicRoutesForSitemap = (callback): void => {
+    const index: {}[] = [generateIndexRoute(true)];
+    const articles = generateArticlesRoutes(true);
+    const categories = generateCategoriesRoutes(true);
 
     const routes = index.concat(articles, categories);
 
@@ -134,7 +145,7 @@ const config: NuxtConfig = {
     sitemap: {
         path: '/blog/sitemap.xml',
         hostname: 'https://tkskto.me',
-        routes: generateDynamicRoutes,
+        routes: generateDynamicRoutesForSitemap,
     },
 };
 
