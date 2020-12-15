@@ -45,6 +45,7 @@ export default {
   padding: 20px;
   order: 1;
   width: 70%;
+  line-height: 1.8;
 
   &.-external {
     width: 100%;
@@ -191,6 +192,7 @@ export default {
       border-radius: 4px;
       background: #444444;
       color: #f0f0f0;
+      box-shadow: 0 0 14px rgba(0, 0, 0, 0.5) inset;
     }
   }
 
