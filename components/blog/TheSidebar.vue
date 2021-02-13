@@ -5,6 +5,8 @@
       <category-list :all-article-data="allArticleData"/>
       <h2>記事</h2>
       <article-list :list="allArticleData"/>
+      <h2>ご注意</h2>
+      <p class="text">このサイトはアクセス解析のためにGoogle Analyticsを利用しているため、ページを閲覧するとIPアドレスなどの情報がGoogleに送信されます。</p>
     </section>
   </div>
 </template>
@@ -47,6 +49,10 @@ export default {
     &:not(:first-child) {
       margin-top: 16px;
     }
+  }
+
+  .text {
+    font-size: 1.4rem;
   }
 }
 </style>
