@@ -244,5 +244,11 @@
         "date": "2021/1/16",
         "title": "WebStormからVSCodeに移行する",
         "category": "エンジニアリング"
+    },
+    {
+        "id": 42,
+        "date": "2021/2/15",
+        "title": "投資入門",
+        "category": "自分のこと"
     }
 ]
