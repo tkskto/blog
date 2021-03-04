@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "nuxt-ts build",
-    "generate": "nuxt-ts generate",
-    "start": "nuxt-ts start",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,14 +22,13 @@
     "@nuxt/types": "2.14.11",
     "@nuxt/typescript-build": "2.0.3",
     "@nuxtjs/sitemap": "2.4.0",
-    "@types/marked": "1.2.1",
-    "marked": "1.2.6",
+    "@types/marked": "1.2.2",
+    "marked": "1.2.9",
     "sass": "1.30.0",
-    "sass-loader": "10.1.0"
+    "sass-loader": "10.1.1"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "2.0.0",
     "@nuxtjs/google-analytics": "2.4.0",
-    "nuxt": "2.14.7"
+    "nuxt": "2.15.2"
   }
 }

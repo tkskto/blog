@@ -1,0 +1,13 @@
+{
+    "name": "So What!?",
+    "short_name": "So What!?",
+    "start_url": "http://localhost:3000/blog/",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "just a journals of tkskto.",
+    "icons": [{
+        "src": "/blog/images/144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+    }]
+}

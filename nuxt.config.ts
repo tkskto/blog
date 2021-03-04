@@ -92,7 +92,6 @@ const generateDynamicRoutesForSitemap = (callback): void => {
 
 const config: NuxtConfig = {
     target: 'static',
-    buildModules: ['@nuxt/typescript-build'],
     env: {
         baseUrl: process.env.BASE_URL || 'http://localhost:3000'
     },
@@ -105,7 +104,8 @@ const config: NuxtConfig = {
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: 'This is takeshi kato\'s Web blog.' },
-            { hid: 'http-equiv', name: 'http-equiv', content: 'IE=edge' }
+            { hid: 'http-equiv', name: 'http-equiv', content: 'IE=edge' },
+            { hid: 'manifest', name: 'manifest', content: '/blog/manifest.webmanifest' }
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
     },
@@ -129,6 +129,11 @@ const config: NuxtConfig = {
     modules: [
         '@nuxtjs/google-analytics',
         '@nuxtjs/sitemap'
+    ],
+    plugins: [
+        {
+            src: '~/plugins/init.js', ssr: false,
+        },
     ],
     optimization: {
         minimize: true,

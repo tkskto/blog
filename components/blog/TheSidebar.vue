@@ -7,6 +7,8 @@
       <article-list :list="allArticleData"/>
       <h2>ご注意</h2>
       <p class="text">このサイトはアクセス解析のためにGoogle Analyticsを利用しているため、ページを閲覧するとIPアドレスなどの情報がGoogleに送信されます。</p>
+      <br>
+      <p class="text">何か間違っている情報などがあれば<a href="https://twitter.com/tkskto/">Twitter</a>にてメッセージください。</p>
     </section>
   </div>
 </template>
