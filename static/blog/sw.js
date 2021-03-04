@@ -19,7 +19,7 @@ self.addEventListener('fetch', (e) => {
             const requestClone = e.request.clone();
 
             return fetch(requestClone).then((response) => {
-                if(!response || response.status !== 200 || response.type === 'cors') {
+                if(!response || response.status !== 200 || response.type === 'cors' || !e.request.url.startsWith('http')) {
                     return response;
                 }
 
