@@ -16,21 +16,7 @@ self.addEventListener('fetch', (e) => {
                 return response;
             }
 
-            const requestClone = e.request.clone();
-
-            return fetch(requestClone).then((response) => {
-                if(!response || response.status !== 200 || response.type === 'cors' || !e.request.url.startsWith('http')) {
-                    return response;
-                }
-
-                const responseClone = response.clone();
-
-                caches.open(CACHE_KEY).then((cache) => {
-                    cache.put(e.request, responseClone);
-                });
-
-                return response;
-            });
+            return fetch(e.request.clone());
         })
     );
 });
