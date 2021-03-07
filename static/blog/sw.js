@@ -10,13 +10,13 @@ self.addEventListener('install', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-    e.respondWith(
-        caches.match(e.request).then((response) => {
-            if (response) {
-                return response;
-            }
+    e.respondWith(async function() {
+        const cachedResponse = await caches.match(e.request);
 
-            return fetch(e.request.clone());
-        })
-    );
+        if (cachedResponse) {
+            return cachedResponse;
+        }
+
+        return fetch(e.request);
+    }());
 });
