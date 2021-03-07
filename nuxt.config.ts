@@ -106,9 +106,11 @@ const config: NuxtConfig = {
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: 'This is takeshi kato\'s Web blog.' },
             { hid: 'http-equiv', name: 'http-equiv', content: 'IE=edge' },
-            { hid: 'manifest', name: 'manifest', content: '/blog/manifest.json' }
         ],
-        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+        link: [
+            { rel: 'manifest', type: 'manifest', content: '/blog/manifest.json' },
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        ]
     },
     /*
     ** Customize the progress-bar color
