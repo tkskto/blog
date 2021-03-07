@@ -108,7 +108,7 @@ const config: NuxtConfig = {
             { hid: 'http-equiv', name: 'http-equiv', content: 'IE=edge' },
         ],
         link: [
-            { rel: 'manifest', type: 'manifest', content: '/blog/manifest.json' },
+            { rel: 'manifest', type: 'manifest', href: '/blog/manifest.json' },
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ]
     },
