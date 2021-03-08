@@ -91,8 +91,8 @@ const generateDynamicRoutesForSitemap = (callback): void => {
 };
 
 const config: NuxtConfig = {
+    ssr: true,
     target: 'static',
-    buildModules: ['@nuxt/typescript-build'],
     env: {
         baseUrl: process.env.BASE_URL || 'http://localhost:3000'
     },
@@ -142,10 +142,18 @@ const config: NuxtConfig = {
         minimize: true,
         minimizer: [new TerserPlugin()],
     },
+    router: {
+        trailingSlash: false,
+        prefetchLinks: false,
+    },
+    static: {
+        prefix: false,
+    },
     generate: {
-        dir: 'public/',
+        dir: 'public',
         routes: generateDynamicRoutes,
         fallback: '',
+        crawler: false,
     },
     'google-analytics': {
         id: 'UA-71464541-3'

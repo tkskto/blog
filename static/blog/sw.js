@@ -2,6 +2,7 @@ const CACHE_KEY = 'tkskto.me.blog';
 const urlsToCache = [
     '/blog/common/css/app.css',
     '/blog/common/css/vendors/app.css',
+    '/blog/common/css/pages/blog/index.css',
     '/blog/index.html',
 ];
 

@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "nuxt-ts build",
-    "generate": "nuxt-ts generate",
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
     "start": "nuxt-ts start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,8 +30,7 @@
     "sass-loader": "10.1.1"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "2.0.2",
     "@nuxtjs/google-analytics": "2.4.0",
-    "nuxt": "2.14.7"
+    "nuxt": "2.15.2"
   }
 }
