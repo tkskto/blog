@@ -6,7 +6,7 @@
     "dev": "nuxt dev",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "start": "nuxt-ts start",
+    "start": "nuxt start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,16 +21,16 @@
   "homepage": "https://tkskto.me/blog/",
   "devDependencies": {
     "@babel/preset-env": "7.12.17",
-    "@nuxt/types": "2.14.11",
-    "@nuxt/typescript-build": "2.0.3",
+    "@nuxt/types": "2.15.4",
+    "@nuxt/typescript-build": "2.1.0",
     "@nuxtjs/sitemap": "2.4.0",
-    "@types/marked": "1.2.2",
-    "marked": "1.2.9",
-    "sass": "1.30.0",
+    "@types/marked": "2.0.1",
+    "marked": "2.0.3",
+    "sass": "1.32.8",
     "sass-loader": "10.1.1"
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "2.4.0",
-    "nuxt": "2.15.2"
+    "nuxt": "^2.15.4"
   }
 }
