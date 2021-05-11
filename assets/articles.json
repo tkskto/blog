@@ -262,5 +262,11 @@
         "date": "2021/4/12",
         "title": "小さなチームができること",
         "category": "マネジメント"
+    },
+    {
+        "id": 45,
+        "date": "2021/5/11",
+        "title": "DependabotAlert-y18n",
+        "category": "エンジニアリング"
     }
 ]
