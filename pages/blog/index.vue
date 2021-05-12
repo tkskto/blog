@@ -20,11 +20,17 @@ export default {
   head() {
     return {
       htmlAttrs: {lang: 'ja'} ,
-      title: `${this.title} | blog | tkskto`,
+      title: 'So What!?',
       meta: [
         { hid: 'description', name: 'description', content: 'These are logs of tkskto' },
-        { hid: 'og:url', property: 'og:url', content: `https://tkskto.me/blog/${this.title}` },
+        { hid: 'og:type', property: 'og:type', content: 'article' },
+        { hid: 'og:url', property: 'og:url', content: 'https://tkskto.me/blog/' },
         { hid: 'og:title', property: 'og:title', content: this.title },
+        { hid: 'og:site_name', property: 'og:site_name', content: 'So What!?' },
+        { hid: 'og:image', property: 'og:image', content: 'https://tkskto.me/blog/images/ogp.png' },
+        { hid: 'og:description', property: 'og:description', content: this.title },
+        { hid: 'twitter:card', property: 'twitter:card', content: 'summary' },
+        { hid: 'twitter:creator', property: 'twitter:creator', content: 'tkskto' },
       ],
     };
   },
