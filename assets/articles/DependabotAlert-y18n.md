@@ -8,9 +8,9 @@ GitHub Advisory Database番号は「[CVE-2020-7774](https://github.com/advisorie
 
 ## y18nとは
 
-y18nは[yargs](http://yargs.js.org/)で使われている国際化ライブラリ。i18nのyargs版だからyargsなんだと思う。多分。
+y18nは[yargs](http://yargs.js.org/)で使われている国際化ライブラリ。i18nのyargs版だからy18nなんだと思う。多分。
 
-y18nは例えば、以下のような2つのjsonファイルを用意したとする。
+y18nの簡単な使い方。例えば、以下のような2つのjsonファイルを用意したとする。
 
 en.json
 
@@ -42,7 +42,7 @@ const __ = y18n({
 console.log(`${__`hello`} ${__`world`}`); // localeが`en`なら「hello world」で`ja`なら「こんにちは 世界」と出力される
 ```
 
-逆に、jsonに文字を出力することもできるので、プログラムを通して言語ごとの辞書を作ることもできる。
+逆に、JSONファイルに文字を出力することもできるので、プログラムを通して言語ごとの辞書を作ることもできる。
 
 ## 脆弱性について
 
