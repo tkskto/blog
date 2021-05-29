@@ -274,5 +274,11 @@
         "date": "2021/5/17",
         "title": "心理的安全人間になる",
         "category": "マネジメント"
+    },
+    {
+        "id": 47,
+        "date": "2021/5/29",
+        "title": "DependabotAlert-loadash-CVE-2021-23337",
+        "category": "エンジニアリング"
     }
 ]

@@ -7,10 +7,19 @@ const urlsToCache = [
 
 self.addEventListener('install', (e) => {
     e.waitUntil(
-        Promise.all([
-            caches.open(CACHE_KEY_OLD).then((cache) => cache.delete(CACHE_KEY_OLD)),
-            caches.open(CACHE_KEY).then((cache) => cache.addAll(urlsToCache))
-        ])
+        caches.open(CACHE_KEY).then((cache) => cache.addAll(urlsToCache))
+    );
+});
+
+self.addEventListener('activate', function(event) {
+    event.waitUntil(
+        caches.keys().then((cacheNames) => {
+            return Promise.all(
+                cacheNames.filter((cacheName) => cacheName === CACHE_KEY_OLD).map((cacheName) => {
+                    return caches.delete(cacheName);
+                })
+            );
+        })
     );
 });
 

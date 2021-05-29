@@ -144,7 +144,6 @@ const config: NuxtConfig = {
     },
     router: {
         trailingSlash: false,
-        prefetchLinks: false,
     },
     static: {
         prefix: false,
