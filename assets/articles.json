@@ -280,5 +280,17 @@
         "date": "2021/5/29",
         "title": "DependabotAlert-loadash-CVE-2021-23337",
         "category": "エンジニアリング"
+    },
+    {
+        "id": 48,
+        "date": "2021/7/13",
+        "title": "たまには降りる駅を間違えてもいい",
+        "category": "小言"
+    },
+    {
+        "id": 49,
+        "date": "2021/7/16",
+        "title": "DependabotAlert-glob-parent-CVE-2020-28469",
+        "category": "エンジニアリング"
     }
 ]
