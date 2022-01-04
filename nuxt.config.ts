@@ -39,17 +39,17 @@ const generateCategoriesRoutes = (forSitemap: boolean): {route:string, payload: 
 
     for (let i = 0; i < len; i++) {
         const item = articles[i];
-        const {title, category, id} = item;
+        const {title, category} = item;
 
         if (Object.prototype.hasOwnProperty.call(categories, category)) {
             categories[category].push({
                 title,
-                id,
+                id: i + 1,
             });
         } else {
             categories[category] = [{
                 title,
-                id,
+                id: i + 1,
             }];
         }
     }
