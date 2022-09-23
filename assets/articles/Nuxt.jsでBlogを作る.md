@@ -65,7 +65,7 @@ asyncData(context) {
 
 例えば、スマホの時はページ一覧がページ下部に表示されるのだけど、以下のキャプチャの左下、リンクが画面に入ったタイミングで、リンク先の「payload.js」が動的にプリロードされて、リンクがクリックされたあとの遷移が超高速になる。
 
-<p class="img"><img src="/blog/images/39/01.webp" alt=""></p>
+<p class="max-w-full my-11 mx-auto mb-7"><img class="mx-auto align-top" src="/blog/images/39/01.webp" alt=""></p>
 
 しかもNuxt.js内部でネットワークの状況とかを考慮しながらプリフェッチ処理してくれるので、とても優秀。
 

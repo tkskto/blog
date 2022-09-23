@@ -1,14 +1,14 @@
 <template>
-  <div class="str-side">
+  <div class="w-1/4 order-2 ml-2 mt-20 mb-0 md:w-full">
     <section class="str-article-section">
-      <h2>カテゴリ</h2>
+      <h2 class="mb-2 text-2xl font-bold">カテゴリ</h2>
       <category-list :all-article-data="allArticleData"/>
-      <h2>記事</h2>
+      <h2 class="mb-2 text-2xl font-bold mt-6">記事</h2>
       <article-list :list="allArticleData"/>
-      <h2>ご注意</h2>
-      <p class="text">このサイトはアクセス解析のためにGoogle Analyticsを利用しているため、ページを閲覧するとIPアドレスなどの情報がGoogleに送信されます。</p>
+      <h2 class="mb-2 text-2xl font-bold mt-6">ご注意</h2>
+      <p class="text-xl">このサイトはアクセス解析のためにGoogle Analyticsを利用しているため、ページを閲覧するとIPアドレスなどの情報がGoogleに送信されます。</p>
       <br>
-      <p class="text">何か間違っている情報などがあれば<a href="https://twitter.com/tkskto/">Twitter</a>にてメッセージください。</p>
+      <p class="text-xl">何か間違っている情報などがあれば<a href="https://twitter.com/tkskto/">Twitter</a>にてメッセージください。</p>
     </section>
   </div>
 </template>
@@ -34,27 +34,3 @@ export default {
   },
 };
 </script>
-
-<style scoped lang="scss">
-.str-side {
-  width: 30%;
-  order: 2;
-  padding: 80px 10px 0;
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
-
-  .str-article-section h2 {
-    margin-bottom: 8px;
-
-    &:not(:first-child) {
-      margin-top: 16px;
-    }
-  }
-
-  .text {
-    font-size: 1.4rem;
-  }
-}
-</style>

@@ -1,5 +1,7 @@
 <template>
-  <component class="blog-name" :is="tag"><span>So What!?</span></component>
+  <component class="text-5xl text-center leading-loose font-bold mb-20" :is="tag">
+      <span class="px-10 py-3 border-b border-neutral-400">So What!?</span>
+  </component>
 </template>
 <script>
 export default {
@@ -11,16 +13,3 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-.blog-name {
-  font-size: 3.2rem;
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 60px;
-
-  > span {
-    padding: 10px 40px;
-    border-bottom: 1px solid #999;
-  }
-}
-</style>
