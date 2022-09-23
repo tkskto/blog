@@ -2,9 +2,10 @@ import { NuxtConfig } from '@nuxt/types';
 import { readFileSync } from 'fs';
 import * as path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
-import marked from 'marked';
+import { marked } from 'marked';
 const articles = JSON.parse(readFileSync(path.join(__dirname, './assets/articles.json'), 'utf-8')).reverse();
-const generateIndexRoute = (forSitemap: boolean): {route:string, payload: {}} => {
+
+const generateIndexRoute = (forSitemap: boolean): Page => {
     const newest = articles[0];
     const {title, date} = newest;
     const content = marked(readFileSync(`./assets/articles/${title}.md`, {encoding: 'utf-8'}));
@@ -18,7 +19,7 @@ const generateIndexRoute = (forSitemap: boolean): {route:string, payload: {}} =>
         }
     }
 }
-const generateArticlesRoutes = (forSitemap: boolean): {route:string, payload: {}}[] => {
+const generateArticlesRoutes = (forSitemap: boolean): Page[] => {
     return articles.map(item => {
         const {date, title} = item;
         const content = marked(readFileSync(`./assets/articles/${title}.md`, {encoding: 'utf-8'}));
@@ -33,7 +34,7 @@ const generateArticlesRoutes = (forSitemap: boolean): {route:string, payload: {}
         };
     });
 }
-const generateCategoriesRoutes = (forSitemap: boolean): {route:string, payload: {}}[] => {
+const generateCategoriesRoutes = (forSitemap: boolean): Category[] => {
     const categories = {};
     const len = articles.length;
 
@@ -54,7 +55,7 @@ const generateCategoriesRoutes = (forSitemap: boolean): {route:string, payload: 
         }
     }
 
-    const routes: {route:string, payload: {}}[] = [];
+    const routes: Category[] = [];
 
     for (const key in categories) {
         routes.push({
@@ -71,7 +72,7 @@ const generateCategoriesRoutes = (forSitemap: boolean): {route:string, payload: 
 }
 
 const generateDynamicRoutes = (callback): void => {
-    const index: {}[] = [generateIndexRoute(false)];
+    const index: Route[] = [generateIndexRoute(false)];
     const articles = generateArticlesRoutes(false);
     const categories = generateCategoriesRoutes(false);
 
@@ -81,7 +82,7 @@ const generateDynamicRoutes = (callback): void => {
 };
 
 const generateDynamicRoutesForSitemap = (callback): void => {
-    const index: {}[] = [generateIndexRoute(true)];
+    const index: Route[] = [generateIndexRoute(true)];
     const articles = generateArticlesRoutes(true);
     const categories = generateCategoriesRoutes(true);
 
@@ -105,7 +106,6 @@ const config: NuxtConfig = {
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: 'This is takeshi kato\'s Web blog.' },
-            { hid: 'http-equiv', name: 'http-equiv', content: 'IE=edge' },
         ],
         link: [
             { rel: 'manifest', type: 'manifest', href: '/blog/manifest.json' },
