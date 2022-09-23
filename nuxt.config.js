@@ -1,8 +1,10 @@
 import { readFileSync } from 'fs';
 import * as path from 'path';
-import TerserPlugin from 'terser-webpack-plugin';
 import { marked } from 'marked';
+import { renderer } from './marked.js';
 const articles = JSON.parse(readFileSync(path.join(__dirname, './assets/articles.json'), 'utf-8')).reverse();
+
+marked.use({ renderer });
 
 const generateIndexRoute = (forSitemap) => {
   const newest = articles[0];
@@ -145,11 +147,6 @@ export default {
       css: ({ isDev }) => isDev ? 'css/[name].css' : 'css/[name].css',
     },
     publicPath: '/blog/common/'
-  },
-
-  optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
   },
 
   static: {

@@ -2,7 +2,7 @@
 
 近くの神戸サウナで朝ウナ（あさサウナ）した。
 
-<p class="img"><img src="/blog/images/25/1.jpg" alt=""></p>
+<p class="max-w-2xl my-11 mx-auto mb-7 mb-7 md:max-w-full"><img class="mx-auto align-top" src="/blog/images/25/1.jpg" alt=""></p>
 
 以下あとで見返せるよう内容を走り書きした。
 
@@ -76,7 +76,7 @@ Launch Intentからダイレクトに他のインテントに委譲できるよ�
 コード側で動的にエンティティを追加できるようになった。
 これまでは対話モデルを変更した後は再度審査が必要だったが、動的エンティティを使えば期間限定のテンティティを追加したりすることができるようになる。
 
----
+<hr class="mb-4">
 
 ## 交通情報系スキルのテクニック
 
@@ -134,7 +134,7 @@ VUIが使われる場所が増えることが見えてきているので今か�
 - 新しいデバイスを登録した時にuserIDにひもづいたお気に入りをデバイスに紐づけるかどうかを選択させるフローを追加した。
 - voice Profile時にuserIdが変わるかどうか
 
----
+<hr class="mb-4">
 
 ## スマートスピーカーで提供する料理体験 by cookpad
 
@@ -193,7 +193,7 @@ VUIが使われる場所が増えることが見えてきているので今か�
     - いつものタレ一人分ちょうだい（できたらいいよね）
     - 照り焼きのタレ、鶏皮一枚分ちょうだいとか（できたらいいよね）
 
----
+<hr class="mb-4">
 
 ## VUI x IoT
 
@@ -240,13 +240,13 @@ Atomph Windowという壁掛けディスプレイを作ってる京都のスタ�
 
 中野さんの人柄とAtmophのコンセプトに感動したので、Atmoph Window購入します。こんな会社で働きたい。
 
----
+<hr class="mb-4">
 
 ## ログデータ収集の話
 
 ノートとってる余裕なかったので[スライド](https://speakerdeck.com/surumegohan/awswoqu-shi-sitete-xu-chu-yuan-nizhi-tutavuifalse-yin-sheng-rebiyurogudetashou-ji-fen-xi-sisutemu-falsehua)を見よう。
 
----
+<hr class="mb-4">
 
 ## その他参加していないセッションのスライド
 公式サイトに[フォローアップ](https://alexaday2019.aajug.jp/follow-up/)が公開されてた。

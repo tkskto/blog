@@ -1,7 +1,7 @@
 <template>
-  <div class="str-article">
+  <div>
     <blog-name tag="h1"/>
-    <div class="article-content">
+    <div class="flex md:flex-col gap-x-8">
       <the-sidebar :all-article-data="articles"/>
       <the-article :level="2" v-if="title && content" :title="title" :text="content" :date="date"/>
     </div>
@@ -50,15 +50,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.str-article {
-  .article-content {
-    display: flex;
-
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
-    }
-  }
-}
-</style>

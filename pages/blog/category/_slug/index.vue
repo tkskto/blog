@@ -1,11 +1,11 @@
 <template>
-  <div class="str-category">
+  <div>
     <blog-name tag="h1" />
-    <div class="category-content">
+    <div class="flex md:flex-col">
       <the-sidebar :all-article-data="articles"/>
-      <div class="str-category-item">
-        <section class="str-category-section">
-          <h2 class="title">{{categoryName}}の記事一覧</h2>
+      <div class="p-4 order-1 w-3/4 leading-relaxed md:p-0 md:w-full">
+        <section class="block">
+          <h2 class="text-6xl leading-relaxed border-b border-neutral-700 mt-0 mb-6 md:text-3xl">{{categoryName}}の記事一覧</h2>
           <article-list :list="categoryData"/>
         </section>
       </div>
@@ -46,41 +46,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.str-category {
-  .category-content {
-    display: flex;
-
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
-    }
-  }
-}
-
-.str-category-item {
-  padding: 20px;
-  order: 1;
-  width: 70%;
-
-  .title {
-    font-size: 4rem;
-    border-bottom: 1px solid #444444;
-    margin-top: 0;
-    margin-bottom: 24px;
-
-    @media screen and (max-width: 768px) {
-      font-size: 2.0rem;
-    }
-  }
-
-  .str-category-section {
-    display: block;
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    padding: 0;
-  }
-}
-</style>
