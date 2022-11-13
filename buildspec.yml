@@ -10,8 +10,8 @@ phases:
     build:
         commands:
             - echo 'Building'
-            - npm run generate
+            - npm run build
 artifacts:
     files:
         - ./**/*
-    base-directory: 'public'
+    base-directory: 'dist'

@@ -1,0 +1,14 @@
+---
+import BlogLayout from '../layout/blog.astro';
+import TheArticle from '../component/TheArticle.astro';
+const allPosts = await Astro.glob<Frontmatter>('./*.md');
+const [latest] = allPosts.sort((post1, post2) => new Date(post2.frontmatter.publishDate).getTime() - new Date(post1.frontmatter.publishDate).getTime());
+const {title, publishDate} = latest.frontmatter;
+const contents = await latest.compiledContent();
+---
+
+<BlogLayout pageTitle="">
+    <TheArticle level={2} title={title} date={publishDate}>
+        <Fragment set:html={contents} />
+    </TheArticle>
+</BlogLayout>
