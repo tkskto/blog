@@ -1,0 +1,40 @@
+---
+import '../styles/main.css';
+import BlogName from '../component/BlogName.astro';
+import TheSidebar from '../component/TheSidebar.astro';
+
+const { pageTitle } = Astro.props;
+const title = pageTitle ? `${pageTitle} | So What!?` : 'So What!?'
+---
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="This is takeshi kato\'s Web blog." />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <link rel="manifest" type="manifest" href="/blog/manifest.json" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <script>
+            navigator.serviceWorker.register('/blog/sw.js');
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-18FD7QTMFP"></script>
+    </head>
+    <body>
+    <div class="str-root-blog w-full min-h-full break-all p-8 bg-slate-100 text-neutral-900 leading-normal">
+        <div class="str-article">
+            <BlogName tag="p" />
+            <div class="flex md:flex-col">
+                <TheSidebar />
+                <slot />
+            </div>
+        </div>
+    </div>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-18FD7QTMFP');
+    </script>
+    </body>
+</html>
