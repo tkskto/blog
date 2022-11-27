@@ -4,7 +4,7 @@ import ArticleList from "./ArticleList.astro";
 const allPosts = await Astro.glob('../pages/*.md');
 ---
 
-<div class="w-1/4 order-2 ml-2 mt-20 mb-0 md:w-full">
+<div class="w-1/4 order-2 ml-4 mt-20 mb-0 md:w-full">
     <section class="str-article-section">
         <h2 class="mb-2 text-2xl font-bold">カテゴリ</h2>
         <CategoryList posts={allPosts} />
