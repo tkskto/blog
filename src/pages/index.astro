@@ -2,7 +2,8 @@
 import BlogLayout from '../layout/blog.astro';
 import TheArticle from '../component/TheArticle.astro';
 const allPosts = await Astro.glob<Frontmatter>('./*.md');
-const [latest] = allPosts.sort((post1, post2) => new Date(post2.frontmatter.publishDate).getTime() - new Date(post1.frontmatter.publishDate).getTime());
+const sorted = allPosts.sort((post1, post2) => new Date(post2.frontmatter.publishDate).getTime() - new Date(post1.frontmatter.publishDate).getTime());
+const latest = sorted.find((post) => !post.frontmatter.draft);
 const {title, publishDate} = latest.frontmatter;
 const contents = await latest.compiledContent();
 ---
