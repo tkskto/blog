@@ -1,6 +1,6 @@
 ---
 layout: ../layout/post.astro
-title: '私がなぜGLSLをかけないのか'
+title: '私がなぜGLSLを書けないのか'
 publishDate: 2023-02-21
 tags: ['エンジニアリング']
 ---
