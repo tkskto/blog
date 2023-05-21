@@ -1,3 +1,4 @@
+/* eslint-disable strict */
 const CACHE_KEY = '1.0.4';
 const CACHE_KEY_OLD = ['1.0.1', '1.0.2', '1.0.3'];
 const OWN_DOMAIN = 'tkskto.me';
@@ -35,9 +36,9 @@ const fetchAndCache = async (request) => {
         return response;
     }
 
-    const cache = caches.open(CACHE_KEY);
+    const cache = await caches.open(CACHE_KEY);
 
-    cache.put(request, responseClone);
+    await cache.put(request, responseClone);
 
     return response;
 };
@@ -49,7 +50,7 @@ self.addEventListener('fetch', (e) => {
         return;
     }
 
-    e.respondWith(async () => {
+    e.respondWith((async () => {
         const cachedResponse = await caches.open(CACHE_KEY).then((cache) => cache.match(e.request));
 
         if (cachedResponse) {
@@ -57,5 +58,5 @@ self.addEventListener('fetch', (e) => {
         }
 
         return fetchAndCache(e.request);
-    });
+    })());
 });
