@@ -12,7 +12,7 @@ const titleList = sorted.map((post) => post.frontmatter.title);
         {titleList.map((title) => {
             return (
                 <li class="leading-relaxed text-xl">
-                    <a class="text-neutral-900" href={`/blog/${title}`}>{title}</a>
+                    <a class="text-neutral-900" href={`/blog/${title}/`}>{title}</a>
                 </li>
             );
         })}
