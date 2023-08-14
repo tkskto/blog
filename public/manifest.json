@@ -1,7 +1,7 @@
 {
     "name": "So What!?",
     "short_name": "So What!?",
-    "start_url": "http://tkskto.me/blog/",
+    "start_url": "https://tkskto.me/blog/",
     "display": "standalone",
     "background_color": "#fff",
     "description": "just a journals of Takeshi Kato.",

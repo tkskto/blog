@@ -17,7 +17,7 @@ export default defineConfig({
     }), sitemap({
         serialize(item) {
             if (!item.url.endsWith('/')) {
-                item.url = `${item.url}/`
+                item.url = `${item.url}/`;
             }
             return item;
         },

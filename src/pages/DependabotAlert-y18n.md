@@ -39,7 +39,7 @@ ja.json
 
 で、これを以下のように使う。
 
-```JavaScript
+```javascript
 const y18n = require('y18n');
 const __ = y18n({
   locale: 'en',
@@ -61,7 +61,7 @@ y18nでは`setLocale`の引数に`__proto__`を渡すと任意のキーバリュ
 
 元々のクラスのソースコードを一部抜粋。
 
-```JavaScript
+```javascript
 class Y18N {
     // ...
     setLocale(locale) {
@@ -81,7 +81,7 @@ class Y18N {
 
 `this.cache`の初期値が単純なオブジェクト（`{}`）だったため、`setLocale`の引数に`__proto__`を渡したあと、`updateLocale`にキーバリューオブジェクトを渡すと、
 
-```JavaScript
+```javascript
 this.cache['__proto__'][key] = obj[key];
 ```
 
