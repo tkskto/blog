@@ -9,7 +9,7 @@ export default defineConfig({
     site: 'https://tkskto.me',
     base: '/blog',
     outDir: './dist/blog',
-    trailingSlash: 'never',
+    trailingSlash: 'always',
     integrations: [tailwind({
         config: {
             path: './tailwind.config.cjs'

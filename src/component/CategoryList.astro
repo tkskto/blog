@@ -1,23 +1,12 @@
 ---
-const {posts} = Astro.props;
-const categoryList = [];
-
-posts.forEach((articleData) => {
-    const {tags} = articleData.frontmatter;
-
-    tags.forEach((tag) => {
-        if (!categoryList.includes(tag)) {
-            categoryList.push(tag);
-        }
-    });
-})
+const {categories} = Astro.props;
 ---
 <nav class="px-6">
     <ul class="p-0 m-0 flex flex-col gap-y-3">
-        {categoryList.map((category) => {
+        {categories.map((category) => {
             return (
                 <li class="leading-relaxed text-xl">
-                    <a class="text-neutral-900" href={`/blog/category/${category}/`}>{category}</a>
+                    <a class="text-neutral-900" href={`/blog/category/${category.name}/`}>{category.name}</a>
                 </li>
             );
         })}
