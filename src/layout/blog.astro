@@ -5,6 +5,7 @@ import TheSidebar from '../component/TheSidebar.astro';
 
 const { pageTitle } = Astro.props;
 const title = pageTitle ? `${pageTitle} | So What!?` : 'So What!?'
+const url = `https://tkskto.me/blog/${pageTitle}/`;
 ---
 <html lang="ja">
     <head>
@@ -15,6 +16,16 @@ const title = pageTitle ? `${pageTitle} | So What!?` : 'So What!?'
         <title>{title}</title>
         <link rel="manifest" type="manifest" href="/blog/manifest.json" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <meta property="og:title" content={title}>
+        <meta property="og:description" content="This is takeshi kato\'s Web blog.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content={url}>
+        <meta property="og:image" content="https://tkskto.me/blog/ogp.png">
+        <meta property="og:locale" content="ja_JP">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <meta property="og:site_name" content="So What!?">
+        <meta name="twitter:creator" content="@tkskto">
         <script>
             navigator.serviceWorker.register('/blog/sw.js');
         </script>

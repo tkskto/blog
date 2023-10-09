@@ -1,0 +1,30 @@
+---
+import BlogLayout from '../layout/blog.astro';
+import TheArticle from '../component/TheArticle.astro';
+import {getArticles} from '../scripts/microcms';
+
+export async function getStaticPaths() {
+    // TODO: 100件以上取得するように変更
+    const articles = await getArticles({limit: 100});
+    const {contents} = articles;
+
+    return contents.map((article) => {
+        return {
+            params: {
+                article: article.title
+            },
+            props: {
+                title: article.title,
+                content: article.content,
+                publishDate: article.publishDate,
+            },
+        };
+    });
+}
+
+const {title, publishDate, content} = Astro.props;
+---
+
+<BlogLayout pageTitle={title}>
+    <TheArticle level={2} title={title} date={publishDate} content={content} />
+</BlogLayout>

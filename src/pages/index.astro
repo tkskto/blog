@@ -1,15 +1,14 @@
 ---
 import BlogLayout from '../layout/blog.astro';
 import TheArticle from '../component/TheArticle.astro';
-const allPosts = await Astro.glob<Frontmatter>('./*.md');
-const sorted = allPosts.sort((post1, post2) => new Date(post2.frontmatter.publishDate).getTime() - new Date(post1.frontmatter.publishDate).getTime());
-const latest = sorted.find((post) => !post.frontmatter.draft);
-const {title, publishDate} = latest.frontmatter;
-const contents = await latest.compiledContent();
+import {getArticles} from '../scripts/microcms';
+
+// TODO: 最新一件表示する
+const {contents} = await getArticles({limit: 100});
+const latest = contents.at(-1);
+const {title, publishDate, content} = latest;
 ---
 
 <BlogLayout pageTitle="">
-    <TheArticle level={2} title={title} date={publishDate}>
-        <Fragment set:html={contents} />
-    </TheArticle>
+    <TheArticle level={2} title={title} date={publishDate} content={content} />
 </BlogLayout>
