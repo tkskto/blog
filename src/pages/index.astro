@@ -4,8 +4,8 @@ import TheArticle from '../component/TheArticle.astro';
 import {getArticles} from '../scripts/microcms';
 
 // TODO: 最新一件表示する
-const {contents} = await getArticles({limit: 1});
-const [latest] = contents;
+const {contents} = await getArticles({limit: 100});
+const latest = contents.at(-1);
 const {title, publishDate, content} = latest;
 ---
 
