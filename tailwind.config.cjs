@@ -1,14 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        "./dist/blog/**/*.html",
+        "./src/**/*.astro",
     ],
     theme: {
-        extend: {},
-
         screens: {
             'md': {'max': '768px'},
         },
     },
-    plugins: [],
 };
