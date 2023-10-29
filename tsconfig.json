@@ -1,43 +1,6 @@
 {
+    "extends": "astro/tsconfigs/base",
     "compilerOptions": {
-        "target": "ES2018",
-        "module": "ESNext",
-        "lib": [
-            "ESNext",
-            "ESNext.AsyncIterable",
-            "DOM"
-        ],
-        "moduleResolution": "node",
-        "sourceMap": false,
-        "esModuleInterop": true,
-        "allowJs": true,
-        "strict": true,
-        "noEmit": true,
-        "experimentalDecorators": true,
-        "noImplicitAny": false,
-        "noImplicitThis": false,
-        "strictNullChecks": true,
-        "removeComments": true,
-        "suppressImplicitAnyIndexErrors": true,
-        "allowSyntheticDefaultImports": true,
-        "baseUrl": ".",
-        "paths": {
-            "~/*": [
-                "./*"
-            ],
-            "@/*": [
-                "./*"
-            ]
-        },
-        "types": [
-            "@types/node",
-            "@nuxt/types"
-        ],
-        "typeRoots": [
-            "node_modules/@types"
-        ]
-    },
-    "exclude": [
-        "node_modules"
-    ]
+        "strictNullChecks": true
+    }
 }

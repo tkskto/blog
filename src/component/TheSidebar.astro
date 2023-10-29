@@ -1,18 +1,18 @@
 ---
+import {getCollection} from 'astro:content';
 import CategoryList from "./CategoryList.astro";
 import ArticleList from "./ArticleList.astro";
-import {getArticles, getCategories} from '../scripts/microcms';
-
-const articles = await getArticles({limit: 100});
-const categories = await getCategories();
+const allPosts = await getCollection('blog', ({data}) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+});
 ---
 
 <div class="w-1/4 order-2 ml-4 mt-20 mb-0 md:w-full">
     <section class="str-article-section">
         <h2 class="mb-2 text-2xl font-bold">カテゴリ</h2>
-        <CategoryList categories={categories.contents} />
+        <CategoryList posts={allPosts} />
         <h2 class="mb-2 text-2xl font-bold mt-6">記事</h2>
-        <ArticleList posts={articles.contents} />
+        <ArticleList posts={allPosts} />
         <h2 class="mb-2 text-2xl font-bold mt-6">連絡先</h2>
         <p class="text-xl">何か間違っている情報などがあれば<a href="https://twitter.com/tkskto/">Twitter</a>にてメッセージください。</p>
     </section>

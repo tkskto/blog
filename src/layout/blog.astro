@@ -3,7 +3,7 @@ import '../styles/main.css';
 import BlogName from '../component/BlogName.astro';
 import TheSidebar from '../component/TheSidebar.astro';
 
-const { pageTitle } = Astro.props;
+const { pageTitle, pageTitleElement } = Astro.props;
 const title = pageTitle ? `${pageTitle} | So What!?` : 'So What!?'
 const url = `https://tkskto.me/blog/${pageTitle}/`;
 ---
@@ -34,7 +34,7 @@ const url = `https://tkskto.me/blog/${pageTitle}/`;
     <body class="bg-slate-100">
     <div class="str-root-blog w-full min-h-full break-all p-8 bg-slate-100 text-neutral-900 leading-normal">
         <div class="str-article">
-            <BlogName tag="p" />
+            <BlogName Element={pageTitleElement} />
             <div class="flex md:flex-col">
                 <TheSidebar />
                 <slot />

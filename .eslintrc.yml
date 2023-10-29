@@ -1,3 +1,5 @@
 extends: '@mitsue'
+parserOptions:
+    sourceType: module
 env:
     serviceworker: true

@@ -21,7 +21,7 @@ html {
 .markdown h2, .markdown h3, .markdown h4 {
     @apply font-bold;
 }
-.markdown h2 {
+.markdown h2:not(.article-title) {
     @apply text-4xl md:text-3xl font-bold mt-10 mb-12;
 }
 .markdown h3 {
