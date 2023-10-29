@@ -1,23 +1,33 @@
 ---
-import BlogLayout from '../../layout/blog.astro';
-import ArticleList from '../../component/ArticleList.astro';
-import {getArticles, getCategories} from '../../scripts/microcms';
+import BlogLayout from "../../layout/blog.astro";
+import ArticleList from "../../component/ArticleList.astro";
 
 export async function getStaticPaths() {
-    const categoryMeta = await getCategories();
-    const {contents} = categoryMeta;
-    const content = await Promise.all(contents.map(async (category) => {
-        const articles = await getArticles({
-            filters: `tags[equals]${category.id}`,
-        });
+    const descriptions = {
+        'マネジメント': 'セルフマネジメントも含めて、いろいろなことを改善するために考えたことや整理したことをまとめた記事。',
+        '本': '読書感想文。偏りがひどい。頭に浮かんだことを書いているだけなので、本の内容から外れていることもしばしばある。',
+        '小言': '発散せずにいられない内容を書き殴る恥ずかしい文章。いわゆるポエムと呼ばれる類。',
+        'イベント': 'イベントに参加した際のレポート。',
+        'エンジニアリング': 'エンジニアとしていろいろ試した時のメモ書きとか。',
+        '旅行': '旅行行った時に感じた時のメモ。',
+        'サウナ': '訪れたサウナのレポート。'
+    };
+    const posts = await Astro.glob<Frontmatter>("../*.md");
+    const uniqueTags = [
+        ...new Set(posts.map((post) => post.frontmatter.tags).flat()),
+    ];
+
+    return uniqueTags.map((tag) => {
+        const filteredPosts = posts.filter((post) =>
+            post.frontmatter.tags.includes(tag)
+        );
+        const description = descriptions[tag];
 
         return {
-            params: { tag: category.name },
-            props: { posts: articles.contents, description: category.description },
+            params: { tag },
+            props: { posts: filteredPosts, description, },
         };
-    }));
-
-    return content;
+    });
 }
 
 const {tag} = Astro.params;
@@ -26,12 +36,12 @@ const pageTile = `${tag}の記事一覧`;
 ---
 
 <BlogLayout pageTile={pageTile}>
-    <div class='p-4 order-1 w-3/4 leading-relaxed md:p-0 md:w-full'>
-        <section class='block'>
-            <h2 class='text-6xl leading-relaxed border-b border-neutral-700 mt-0 mb-12 md:text-3xl'>
+    <div class="p-4 order-1 w-3/4 leading-relaxed md:p-0 md:w-full">
+        <section class="block">
+            <h2 class="text-6xl leading-relaxed border-b border-neutral-700 mt-0 mb-12 md:text-3xl">
                 {pageTile}
             </h2>
-            {description ? <p class='text-3xl leading-relaxed mb-12 md:text-2xl'>{description}</p> : null}
+            {description ? <p class="text-3xl leading-relaxed mb-12 md:text-2xl">{description}</p> : null}
             {posts ? <ArticleList posts={posts} /> : null}
         </section>
     </div>
