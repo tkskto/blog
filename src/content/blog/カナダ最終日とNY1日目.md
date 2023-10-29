@@ -6,12 +6,12 @@ tags: ['旅行']
 
 朝早く起きて、バンクーバールックアウトを横目にバンクーバー空港へ向かう。
 
-<p class="max-w-full my-11 mx-auto mb-7"><img class="mx-auto align-top" src="/blog/images/8/1.jpg" alt="バンクーバールックアウト"></p>
+<div class="img"><img src="/blog/images/8/1.jpg" alt="バンクーバールックアウト"></div>
 
 カナダからアメリカへのフライトは特殊らしく、カナダ側（飛行機に搭乗する前）にアメリカの入国審査がもうけられていた。
 シアトルの時みたいに別室行きかと思いきや、すんなりいけたので一安心。バーガーキングで朝食をとり、出発。
 
-<p class="max-w-full my-11 mx-auto mb-7"><img class="mx-auto align-top" src="/blog/images/8/2.jpg" alt="バンクーバー空港での一枚"></p>
+<div class="img"><img src="/blog/images/8/2.jpg" alt="バンクーバー空港での一枚"></div>
 
 離陸するときに隣の姉ちゃんが何度も十字架きってたのが印象的だった。
 バンクーバー空港から、ニューアーク（ニューヨークじゃない方）へ。だいたい5時間くらいだったと思う。
@@ -22,13 +22,13 @@ tags: ['旅行']
 ニューアーク空港に到着。空港内に店があんまりなく、暇だったのでとりあえずエアートレインで集合場所へ。もう一人のお友達と合流した。
 その後すぐにマンハッタンへの電車にのり、宿へ。
 
-<p class="max-w-full my-11 mx-auto mb-7"><img class="mx-auto align-top" src="/blog/images/8/3.jpg" alt="NY初上陸記念の一枚"></p>
+<div class="img"><img src="/blog/images/8/3.jpg" alt="NY初上陸記念の一枚"></div>
 
 最初のマンションはまさかの別人の家。
 何回もインターホンおして、住んでるにーちゃんが丁寧に教えてくれたけど、それも違ってた笑
 結局隣のマンションの三階。最初は若干汚いかなと思ったけど、住めば都。その後は帰ってくると安心する場所でもあった。
 
-<p class="max-w-full my-11 mx-auto mb-7"><img class="mx-auto align-top" src="/blog/images/8/4.jpg" alt="家の中"></p>
+<div class="img"><img src="/blog/images/8/4.jpg" alt="家の中"></div>
 
 荷物を置いて夜食を探しに夜のハーレムへ。どこのお店に入っても、店員さん、お客さん両方黒人ばかりで、
 怖くないといえば嘘になる。けど、１０分ほど歩いて入ったハンバーガー屋さんでは皆気さくな人たちで
@@ -37,6 +37,6 @@ tags: ['旅行']
 
 歩いてホテルで一息つく。
 
-<p class="max-w-full my-11 mx-auto mb-7"><img class="mx-auto align-top" src="/blog/images/8/5.jpg" alt="チキン"></p>
+<div class="img"><img src="/blog/images/8/5.jpg" alt="チキン"></div>
 
 ここで買ったポテトは結局最終日まで冷蔵庫に残ることになる。多すぎて。

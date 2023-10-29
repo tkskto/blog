@@ -8,7 +8,7 @@ tags: ['イベント']
 
 近くの神戸サウナで朝ウナ（あさサウナ）した。
 
-<p class="max-w-2xl my-11 mx-auto mb-7 mb-7 md:max-w-full"><img class="mx-auto align-top" src="/blog/images/25/1.jpg" alt=""></p>
+<div class="img"><img src="/blog/images/25/1.jpg" alt=""></div>
 
 以下あとで見返せるよう内容を走り書きした。
 

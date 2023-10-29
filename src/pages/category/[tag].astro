@@ -13,7 +13,9 @@ export async function getStaticPaths() {
         '旅行': '旅行行った時に感じた時のメモ。',
         'サウナ': '訪れたサウナのレポート。'
     };
-    const posts = await getCollection('blog');
+    const posts = await getCollection('blog', ({data}) => {
+        return import.meta.env.PROD ? data.draft !== true : true;
+    });
     const uniqueTags = [
         ...new Set(posts.map((post) => post.data.tags).flat()),
     ];
