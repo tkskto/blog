@@ -1,18 +1,16 @@
 ---
 const {posts} = Astro.props;
-const filtered = posts.filter((post) => !post.frontmatter.draft);
-const sorted = filtered.sort((post1, post2) => {
-    return new Date(post2.frontmatter.publishDate).getTime() - new Date(post1.frontmatter.publishDate).getTime();
+const sorted = posts.sort((post1, post2) => {
+    return new Date(post2.data.publishDate).getTime() - new Date(post1.data.publishDate).getTime();
 });
-const titleList = sorted.map((post) => post.frontmatter.title);
 ---
 
 <nav class="px-6">
     <ul class="p-0 m-0 flex flex-col gap-y-3">
-        {titleList.map((title) => {
+        {sorted.map(({data, slug}) => {
             return (
                 <li class="leading-relaxed text-xl">
-                    <a class="text-neutral-900" href={`/blog/${title}/`}>{title}</a>
+                    <a class="text-neutral-900" href={`/blog/${slug}/`}>{data.title}</a>
                 </li>
             );
         })}

@@ -1,4 +1,5 @@
 ---
+import {getCollection} from 'astro:content';
 import BlogLayout from "../../layout/blog.astro";
 import ArticleList from "../../component/ArticleList.astro";
 
@@ -12,14 +13,14 @@ export async function getStaticPaths() {
         '旅行': '旅行行った時に感じた時のメモ。',
         'サウナ': '訪れたサウナのレポート。'
     };
-    const posts = await Astro.glob<Frontmatter>("../*.md");
+    const posts = await getCollection('blog');
     const uniqueTags = [
-        ...new Set(posts.map((post) => post.frontmatter.tags).flat()),
+        ...new Set(posts.map((post) => post.data.tags).flat()),
     ];
 
     return uniqueTags.map((tag) => {
         const filteredPosts = posts.filter((post) =>
-            post.frontmatter.tags.includes(tag)
+            post.data.tags.includes(tag)
         );
         const description = descriptions[tag];
 
@@ -32,14 +33,14 @@ export async function getStaticPaths() {
 
 const {tag} = Astro.params;
 const {posts, description} = Astro.props;
-const pageTile = `${tag}の記事一覧`;
+const pageTitle = `${tag}の記事一覧`;
 ---
 
-<BlogLayout pageTile={pageTile}>
+<BlogLayout pageTitle={pageTitle}>
     <div class="p-4 order-1 w-3/4 leading-relaxed md:p-0 md:w-full">
         <section class="block">
             <h2 class="text-6xl leading-relaxed border-b border-neutral-700 mt-0 mb-12 md:text-3xl">
-                {pageTile}
+                {pageTitle}
             </h2>
             {description ? <p class="text-3xl leading-relaxed mb-12 md:text-2xl">{description}</p> : null}
             {posts ? <ArticleList posts={posts} /> : null}

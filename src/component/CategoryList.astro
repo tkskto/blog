@@ -3,7 +3,7 @@ const {posts} = Astro.props;
 const categoryList = [];
 
 posts.forEach((articleData) => {
-    const {tags} = articleData.frontmatter;
+    const {tags} = articleData.data;
 
     tags.forEach((tag) => {
         if (!categoryList.includes(tag)) {
