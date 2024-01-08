@@ -12,8 +12,14 @@ html {
     box-sizing: border-box;
 }
 
-.markdown ul, .markdown ol  {
-    @apply mt-0 mr-0 mb-2 ml-5 text-2xl font-normal list-disc list-outside;
+.markdown ul, .markdown ol {
+    @apply mt-0 mr-0 mb-8 ml-8 text-2xl font-normal list-outside;
+}
+.markdown ul {
+    @apply list-disc;
+}
+.markdown ol {
+    @apply list-decimal;
 }
 .markdown li  {
     @apply leading-loose;
@@ -45,7 +51,8 @@ html {
 .markdown hr {
     @apply mb-4;
 }
-.markdown p code {
+.markdown p code,
+.markdown li code {
     @apply bg-neutral-200 text-neutral-500 p-2;
 }
 .markdown .img {
@@ -59,5 +66,5 @@ html {
 }
 .astro-code {
     padding: 10px;
-    @apply my-2;
+    @apply my-2 text-xl mb-8;
 }
