@@ -6,9 +6,26 @@ tags: ['エンジニアリング']
 
 IntelliJというか、WebStormのプラグインを作りたくていろいろ調べながら進めているのでメモ。
 
+追記ここから；
+
+あれやりたいけどどうやってやればいいか分からない、とかが多発したけど、最初はどこをフックにして情報を探せばよいか検討がつかなかった。
+
+プラグインの開発を始める前に[Explore the IntelliJ Platform API](https://plugins.jetbrains.com/docs/intellij/explore-api.html)を読んでおくとよいかもしれない。
+
+読んだとしても、APIの使い方が簡単になるわけではないけど、とっかかりを掴むのには役立ちそう。
+
+あと、全部は見てないけど、テスト周りの応用的な話がYouTubeに上がってたりしたのでメモとして書いておく。
+
+*   [Busy Plugin Developers](https://www.youtube.com/playlist?list=PLQ176FUIyIUZRWGCFY7G9V5zaM00THymY)
+*   [IntelliJ Idea Plugin Development EP01](https://www.youtube.com/watch?v=fVos38m3CU4)
+
+：追記ここまで
+
 ## 公式のテンプレートを使う
 
 まずはJetBrainsのGitHubに[intellij-platform-plugin-template](https://github.com/JetBrains/intellij-platform-plugin-template)があるので、まずはそのテンプレートを使ってプロジェクトを作りつつ、このGitHubリポジトリのREADME.mdにプロジェクトを作成した後の手順を見ながら変えないといけないところを変える。
+
+テンプレートを使わない場合は[Plugin DevKit](https://plugins.jetbrains.com/plugin/22851-plugin-devkit)っていうプラグイン開発用のプラグインがあるので、こちらも使うとシンプルな構成新規プロジェクトを作成できる。
 
 ## plugin.xml
 
