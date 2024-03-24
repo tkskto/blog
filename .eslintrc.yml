@@ -3,3 +3,6 @@ parserOptions:
     sourceType: module
 env:
     serviceworker: true
+rules:
+    arrow-body-style: 0
+
