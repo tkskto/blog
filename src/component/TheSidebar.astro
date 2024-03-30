@@ -7,13 +7,13 @@ const allPosts = await getCollection('blog', ({data}) => {
 });
 ---
 
-<div class="w-1/4 order-2 ml-4 mt-20 mb-0 md:w-full">
+<div class="w-1/4 order-2 mt-28 mb-0 md:mt-0 md:w-full">
     <section class="str-article-section">
-        <h2 class="mb-2 text-2xl font-bold">カテゴリ</h2>
+        <h2 class="mb-6 text-2xl font-bold">カテゴリ</h2>
         <CategoryList posts={allPosts} />
-        <h2 class="mb-2 text-2xl font-bold mt-6">記事</h2>
+        <h2 class="mb-6 text-2xl font-bold mt-12">記事</h2>
         <ArticleList posts={allPosts} />
-        <h2 class="mb-2 text-2xl font-bold mt-6">連絡先</h2>
+        <h2 class="mb-6 text-2xl font-bold mt-12">連絡先</h2>
         <p class="text-xl">何か間違っている情報などがあれば<a href="https://twitter.com/tkskto/">Twitter</a>にてメッセージください。</p>
     </section>
 </div>

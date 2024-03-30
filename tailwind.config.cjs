@@ -8,5 +8,10 @@ module.exports = {
         screens: {
             'md': {'max': '768px'},
         },
+        extend: {
+            maxWidth: {
+                prose: '160ch',
+            },
+        }
     },
 };

@@ -12,11 +12,11 @@ posts.forEach((articleData) => {
     });
 })
 ---
-<nav class="px-6">
+<nav>
     <ul class="p-0 m-0 flex flex-col gap-y-3">
         {categoryList.map((category) => {
             return (
-                <li class="leading-relaxed text-xl">
+                <li class="leading-snug text-xl mt-1">
                     <a class="text-neutral-900" href={`/blog/category/${category}/`}>{category}</a>
                 </li>
             );

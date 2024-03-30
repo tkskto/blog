@@ -35,7 +35,7 @@ const url = `https://tkskto.me/blog/${pageTitle}/`;
     <div class="str-root-blog w-full min-h-full break-all p-8 bg-slate-100 text-neutral-900 leading-normal">
         <div class="str-article">
             <BlogName Element={pageTitleElement} />
-            <div class="flex md:flex-col">
+            <div class="flex md:flex-col max-w-prose mx-auto gap-16">
                 <TheSidebar />
                 <slot />
             </div>
