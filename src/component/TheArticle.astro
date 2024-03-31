@@ -6,8 +6,8 @@ const dateText = `${dateObject.getFullYear()}年${dateObject.getMonth() + 1}月$
 
 <article class="p-4 order-1 w-3/4 leading-relaxed md:p-0 md:w-full">
     <section class="block markdown">
-        <Element class="text-6xl leading-relaxed border-b border-neutral-700 mt-0 mb-6 md:text-3xl md:leading-relaxed article-title">{title}</Element>
-        <p class="text-right text-2xl text-neutral-700 mb-16">{dateText}</p>
+        <Element class="text-4xl leading-relaxed border-b border-neutral-700 mt-0 mb-6 md:text-3xl md:leading-relaxed article-title">{title}</Element>
+        <p class="text-right text-neutral-700 mb-16">{dateText}</p>
         <slot />
     </section>
 </article>
