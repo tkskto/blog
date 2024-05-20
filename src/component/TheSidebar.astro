@@ -15,5 +15,7 @@ const allPosts = await getCollection('blog', ({data}) => {
         <ArticleList posts={allPosts} />
         <h2 class="mb-6 text-2xl font-bold mt-12">連絡先</h2>
         <p class="text-xl">何か間違っている情報などがあれば<a href="https://twitter.com/tkskto/">Twitter</a>にてメッセージください。</p>
+        <h2 class="mb-6 text-2xl font-bold mt-12">ご注意</h2>
+        <p class="text-xl">このBlogはアクセスデータをGoogle Analyticsに送信しています。また研究開発用にSentryにパフォーマンスデータを送信しています。それ以外のデータは収集していません。</p>
     </section>
 </div>
