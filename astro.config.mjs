@@ -1,8 +1,8 @@
-import { defineConfig } from 'astro/config';
+import {defineConfig} from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import sentry from "@sentry/astro";
+import sentry from '@sentry/astro';
 
-import sitemap from "@astrojs/sitemap";
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,13 +20,14 @@ export default defineConfig({
                 if (!item.url.endsWith('/')) {
                     item.url = `${item.url}/`;
                 }
+
                 return item;
             },
         }),
         sentry({
-            dsn: "https://db2a59df687893a5bc3e0086441b58b8@o4507225095340032.ingest.us.sentry.io/4507225098354688",
+            dsn: 'https://db2a59df687893a5bc3e0086441b58b8@o4507225095340032.ingest.us.sentry.io/4507225098354688',
             sourceMapsUploadOptions: {
-                project: "javascript-astro",
+                project: 'javascript-astro',
                 authToken: process.env.SENTRY_AUTH_TOKEN,
             },
         }),

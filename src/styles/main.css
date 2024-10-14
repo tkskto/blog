@@ -39,6 +39,15 @@ html {
 .markdown p {
     @apply font-normal mb-8 text-2xl leading-loose;
 }
+.markdown table,
+.markdown th,
+.markdown td {
+    @apply border bg-slate-50;
+}
+.markdown th,
+.markdown td {
+    @apply font-normal mb-8 text-2xl leading-loose p-3;
+}
 .markdown a {
     @apply text-blue-700 underline;
 }

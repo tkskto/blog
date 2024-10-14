@@ -20,16 +20,16 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/tailwind": "5.1.0",
-        "@sentry/astro": "8.2.1",
-        "astro": "4.5.9",
-        "tailwindcss": "3.4.1"
+        "@astrojs/tailwind": "5.1.1",
+        "@sentry/astro": "8.33.1",
+        "astro": "4.15.11",
+        "tailwindcss": "3.4.13"
     },
     "devDependencies": {
-        "@astrojs/rss": "4.0.5",
-        "@astrojs/sitemap": "3.1.1",
+        "@astrojs/rss": "4.0.7",
+        "@astrojs/sitemap": "3.2.0",
         "@mitsue/eslint-config": "4.1.0",
         "eslint": "8.57.0",
-        "marked": "^12.0.1"
+        "marked": "14.1.2"
     }
 }
