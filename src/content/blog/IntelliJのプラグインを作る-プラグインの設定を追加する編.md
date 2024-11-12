@@ -4,7 +4,7 @@ publishDate: 2024-11-13
 tags: ['エンジニアリング']
 ---
 
-このタイミングでIntelliJ Platform Pluginのバージョンをv2にアップデートした。主にbuild.gradle.ktsの記載の仕方が変わったがこの記事では触れない。
+このタイミングでIntelliJ Platform Pluginのバージョンをv2にアップデートした。主にbuild.gradle.ktsの記載の仕方が変わっており、[JetBrains Plugin Developer Conf 2024](https://www.youtube.com/live/nsEGDXvnsa4?si=6aWGnx_6Deood7_C&t=1089)を見てもらえるとよいと思う。
 
 以下の記事がこれまでの記録。
 
