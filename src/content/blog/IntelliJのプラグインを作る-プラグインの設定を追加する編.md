@@ -1,6 +1,6 @@
 ---
-title: 'IntelliJのプラグインを作る-npmパッケージを動かすぞ編'
-publishDate: 2024-06-04
+title: 'IntelliJのプラグインを作る-プラグインの設定を追加する編'
+publishDate: 2024-11-13
 tags: ['エンジニアリング']
 ---
 

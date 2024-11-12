@@ -4,6 +4,8 @@ publishDate: 2024-06-04
 tags: ['エンジニアリング']
 ---
 
+※ この記事を書いた後にIntelliJ Platform Pluginのメジャーバージョンアップがあり、かなり大幅に変わっているので、もしかしたら参考にならないかもしれない。変更点は[JetBrains Plugin Developer Conf 2024](https://www.youtube.com/live/nsEGDXvnsa4?si=6aWGnx_6Deood7_C&t=1089)を見てもらえるとよいと思う。
+
 以下の2記事がこれまでの記録。
 
 *   [IntelliJのプラグインを作る-1日目](/blog/intellijのプラグインを作る-1日目/)
