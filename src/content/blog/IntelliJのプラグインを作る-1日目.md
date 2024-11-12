@@ -6,6 +6,8 @@ tags: ['エンジニアリング']
 
 IntelliJというか、WebStormのプラグインを作りたくていろいろ調べながら進めているのでメモ。
 
+※ この記事を書いた後にIntelliJ Platform Pluginのメジャーバージョンアップがあり、かなり大幅に変わっているので、もしかしたら参考にならないかもしれない。変更点は[JetBrains Plugin Developer Conf 2024](https://www.youtube.com/live/nsEGDXvnsa4?si=6aWGnx_6Deood7_C&t=1089)を見てもらえるとよいと思う。
+
 追記ここから；
 
 あれやりたいけどどうやってやればいいか分からない、とかが多発したけど、最初はどこをフックにして情報を探せばよいか検討がつかなかった。
