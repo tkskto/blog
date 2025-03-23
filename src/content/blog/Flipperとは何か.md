@@ -1,7 +1,7 @@
 ---
 title: 'Flipperとは何か'
 publishDate: 2018-11-18
-tags: ['イベント']
+tags: ['エンジニアリング']
 draft: true
 ---
 
@@ -13,7 +13,7 @@ React Nativeで開発をしたことがある人なら聞いたことがある�
 
 一応書いておくと、Androidではgradle.propertiesに、iOSでPodfileにそれぞれFlipperのバージョンを記載するが、React NativeはPackage.jsonに書くので、それぞれの依存関係は担保できず気づかずに開発しているとハマってしまうのである。
 
-実際、Flipperはアプリ側で有効にする必要があり、[Set up your React Native App](https://fbflipper.com/docs/getting-started/react-native)によればReact Native 0.62以降、`react-native init`コマンドで作成されたプロジェクトにはデフォルオでFlipper SDKが含まれるらしい。
+実際、Flipperはアプリ側で有効にする必要があり、[Set up your React Native App](https://fbflipper.com/docs/getting-started/react-native)によればReact Native 0.62以降、`react-native init`コマンドで作成されたプロジェクトにはデフォルトでFlipper SDKが含まれるらしい。
 
 もちろんそれはデバッグするためであり、SDKを埋め込むだけでは意味がない。専用のデバッグアプリを<https://fbflipper.com/>からダウンロードして開発マシンにインストールし、SDKを埋め込んだアプリがインストールされたデバイスをつなぐといろんな情報が取れる。
 
@@ -29,5 +29,3 @@ React Nativeで開発をしたことがある人なら聞いたことがある�
 *   [アプリのネットワーク送受信データを見れるプラグイン](https://fbflipper.com/docs/features/plugins/network)
 
 Flipperを統合したまま公開しているようなアプリであれば、デバイスをつなげばどんな情報をDBに保存しているか、どこと通信しているのかなどを基本見れてしまう。
-
-## react-native init直後で見てみる
