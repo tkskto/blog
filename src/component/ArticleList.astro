@@ -10,7 +10,7 @@ const sorted = posts.sort((post1, post2) => {
         {sorted.map(({data, slug}) => {
             return (
                 <li class="leading-snug text-xl mt-2">
-                    <a class="text-neutral-900" href={`/blog/${slug}/`}>{data.title}</a>
+                    <a class="text-neutral-900" href={`/${slug}/`}>{data.title}</a>
                 </li>
             );
         })}
