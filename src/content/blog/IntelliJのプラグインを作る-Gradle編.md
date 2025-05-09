@@ -6,7 +6,7 @@ tags: ['エンジニアリング']
 
 ※ この記事を書いた後にIntelliJ Platform Pluginのメジャーバージョンアップがあり、かなり大幅に変わっているので、もしかしたら参考にならないかもしれない。変更点は[JetBrains Plugin Developer Conf 2024](https://www.youtube.com/live/nsEGDXvnsa4?si=6aWGnx_6Deood7_C&t=1089)を見てもらえるとよいと思う。
 
-[前回](/blog/intellijのプラグインを作る-1日目/)に続いてWebStormのプラグインを作るまでの道のり第二弾。これまでどうにか避けては通ってきたGradle（グレードル）について。
+[前回](/intellijのプラグインを作る-1日目/)に続いてWebStormのプラグインを作るまでの道のり第二弾。これまでどうにか避けては通ってきたGradle（グレードル）について。
 
 Androidのアプリ作る時も依存関係の設定やビルドをするのにGradleを使っている。おもにJava、Kotlinのプロジェクトに使われている気がする。
 

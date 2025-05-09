@@ -1,12 +1,12 @@
 {
     "name": "So What!?",
     "short_name": "So What!?",
-    "start_url": "https://tkskto.me/blog/",
+    "start_url": "https://blog.tkskto.me/",
     "display": "standalone",
     "background_color": "#fff",
     "description": "just a journals of Takeshi Kato.",
     "icons": [{
-        "src": "/blog/images/144x144.png",
+        "src": "/images/144x144.png",
         "sizes": "144x144",
         "type": "image/png"
     }]

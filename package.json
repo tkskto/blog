@@ -11,7 +11,7 @@
     "bugs": {
         "url": "https://github.com/tkskto/blog/issues"
     },
-    "homepage": "https://tkskto.me/blog/",
+    "homepage": "https://blog.tkskto.me/",
     "scripts": {
         "dev": "astro dev",
         "start": "astro dev",

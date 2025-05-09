@@ -1,3 +1,3 @@
 # blog
 
-https://tkskto.me/blog/
+https://blog.tkskto.me/
