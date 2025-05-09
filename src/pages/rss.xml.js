@@ -14,12 +14,12 @@ export async function GET(context) {
         description: 'This is takeshi kato\'s Web blog.',
         site: context.site,
         image: {
-            url: '/blog/ogp.png',
+            url: '/ogp.png',
         },
         items: sortedBlogPost.map((post) => ({
             title: post.data.title,
             pubDate: post.data.publishDate,
-            link: `/blog/${post.data.title}/`,
+            link: `/${post.data.title}/`,
             content: marked.parse(post.body.replaceAll('src="/', `src="${context.site}/`).replaceAll('href="/', `href="${context.site}/`)),
         })),
         customData: '<language>ja-jp</language>',

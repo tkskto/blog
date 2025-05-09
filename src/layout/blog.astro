@@ -5,7 +5,7 @@ import TheSidebar from '../component/TheSidebar.astro';
 
 const { pageTitle, pageTitleElement } = Astro.props;
 const title = pageTitle ? `${pageTitle} | So What!?` : 'So What!?'
-const url = `https://tkskto.me/blog/${pageTitle}/`;
+const url = `https://tkskto.me/${pageTitle}/`;
 ---
 <html lang="ja">
     <head>
@@ -14,19 +14,19 @@ const url = `https://tkskto.me/blog/${pageTitle}/`;
         <meta name="description" content="This is takeshi kato\'s Web blog." />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
-        <link rel="manifest" type="manifest" href="/blog/manifest.json" />
+        <link rel="manifest" type="manifest" href="/manifest.json" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <meta property="og:title" content={title}>
         <meta property="og:description" content="This is takeshi kato\'s Web log.">
         <meta property="og:type" content="website">
         <meta property="og:url" content={url}>
-        <meta property="og:image" content="https://tkskto.me/blog/ogp.png">
+        <meta property="og:image" content="https://tkskto.me/ogp.png">
         <meta property="og:locale" content="ja_JP">
         <meta name="twitter:card" content="summary_large_image">
         <meta property="og:site_name" content="So What!?">
         <meta name="twitter:creator" content="@tkskto">
         <script>
-            navigator.serviceWorker.register('/blog/sw.js');
+            navigator.serviceWorker.register('/sw.js');
         </script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-18FD7QTMFP"></script>
     </head>

@@ -8,8 +8,8 @@ tags: ['エンジニアリング']
 
 以下の2記事がこれまでの記録。
 
-*   [IntelliJのプラグインを作る-1日目](/blog/intellijのプラグインを作る-1日目/)
-*   [IntelliJのプラグインを作る-Gradle編](/blog/intellijのプラグインを作る-Gradle編/)
+*   [IntelliJのプラグインを作る-1日目](/intellijのプラグインを作る-1日目/)
+*   [IntelliJのプラグインを作る-Gradle編](/intellijのプラグインを作る-Gradle編/)
 
 今回はプラグインの中でnpmパッケージ、つまりNode.jsを動かすところまでやっていこう。
 

@@ -7,13 +7,13 @@ tags: ['旅行']
 最終日は[SOHO](https://www.google.com/maps/place/@40.7236447,-74.0050567,16z/data=!3m1!4b1!4m5!3m4!1s0x89c2598c5e51e2f3:0xce2f3449f490f818!8m2!3d40.723301!4d-74.0029883)とハイラインを歩きました。
 SOHOはめちゃくちゃ落ち着いててNYの中でもダントツに好きな時間だった。
 
-<div class="img"><img src="/blog/images/11/1.jpg" alt="SOHO1"></div>
-<div class="img"><img src="/blog/images/11/2.jpg" alt="SOHO2"></div>
+<div class="img"><img src="/images/11/1.jpg" alt="SOHO1"></div>
+<div class="img"><img src="/images/11/2.jpg" alt="SOHO2"></div>
 
 朝飯は[Jack's Wife Freda - SoHo](https://www.google.com/maps/place/@40.722054,-73.9973804,19.74z/data=!4m5!3m4!1s0x89c25988d7b58803:0x1dd33c62aeb2a76a!8m2!3d40.7221234!4d-73.9975099?authuser=0&hl=ja)で。
 出てくる飯はすべておしゃれ。店員さんも可愛いし気がきくし。。日本のおもてなしとか別に取り上げるレベルじゃないと思う。
 
-<div class="img"><img src="/blog/images/11/3.jpg" alt="朝食"></div>
+<div class="img"><img src="/images/11/3.jpg" alt="朝食"></div>
 
 [ハイライン](https://www.google.com/maps/place/@40.7479925,-74.0069536,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259c7840fb4e5:0x583f615c850a3c91!8m2!3d40.7479925!4d-74.0047649?authuser=0&hl=ja)は外から見るとなんかすげーって感じしたけど、歩いているうちはただの遊歩道。
 でも途中でいきなり道が無くなったりとか、今思うと日本ではありえない。
@@ -21,12 +21,12 @@ SOHOはめちゃくちゃ落ち着いててNYの中でもダントツに好き�
 
 道の途中にマーケットっぽいやつもいくつかあって食べ歩きとかできる。
 
-<div class="img"><img src="/blog/images/11/4.jpg" alt="ハイライン"></div>
+<div class="img"><img src="/images/11/4.jpg" alt="ハイライン"></div>
 
 この日待ち合わせに使った[Housing Works Bookstore Cafe](https://www.google.com/maps/place/@40.724569,-73.9986737,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2598f0b63a449:0xd48bfa18a7914de3!8m2!3d40.724569!4d-73.996485?authuser=0&hl=ja)にアメコミがたくさん置いてあって、
 これは確かに集めたくなるなぁ〜とビッグバンセオリーを思い出しながら思ったのでした。
 
-<div class="img"><img src="/blog/images/11/5.jpg" alt="アメコミ"></div>
+<div class="img"><img src="/images/11/5.jpg" alt="アメコミ"></div>
 
 ここで、カナダから1週間ほど共に過ごしてくれた友達とお別れ。
 だいぶ頼もしかったなぁ。感謝しきれません。ありがとう。
@@ -68,22 +68,22 @@ WeChatPayだけでも買い物系なら結構使えるんだけど、
 
 ちなみに深セン空港はこんな感じ。デジファブ感あるなぁ。
 
-<div class="img"><img src="/blog/images/11/6.jpg" alt=""></div>
+<div class="img"><img src="/images/11/6.jpg" alt=""></div>
 
 空港で本読んだりしてだらだらして、その後とりあえずホテルへ。駅から歩いて行ったらくそ遠くて後悔。途中しらんおっさんに野次られる。
 途中建ててるのか壊してるのかわからない建物に遭遇。
 
-<div class="img"><img src="/blog/images/11/7.jpg" alt=""></div>
+<div class="img"><img src="/images/11/7.jpg" alt=""></div>
 
 歩道を自転車バイクが普通に走っている。
 
-<div class="img"><img src="/blog/images/11/8.jpg" alt=""></div>
+<div class="img"><img src="/images/11/8.jpg" alt=""></div>
 
 あと、mobike, ofo, flutbikeのチャリが散乱している。都市部はmobike、地方はofoが多い印象。
 乗り捨てされてる自転車についてるバーコードを読み取って、好きなところで乗り捨てる。たいていのチャリは汚いし壊れてる。
 しばらくたったら一斉に掃除するの？ってくらい放置されてる。
 
-<div class="img"><img src="/blog/images/11/9.jpg" alt=""></div>
+<div class="img"><img src="/images/11/9.jpg" alt=""></div>
 
 ホテルついて早めにチェックインしたいと伝えたら英語が通じない！と思ったら実は隣のレストラン。
 翻訳を使ったらホテルは隣だよ、とかわいいお姉さんが教えてくれた。
@@ -91,6 +91,6 @@ WeChatPayだけでも買い物系なら結構使えるんだけど、
 ホテルついたらやっぱり英語は通じない。なんとかアプリで会話して、クレジットが使えずお金を下ろして、チェックイン。
 とりあえず近くに[京基100](https://www.google.com/maps/place/@22.542218,114.106514,15z/data=!4m2!3m1!1s0x0:0x8b1e15d64b5eee9?ved=2ahUKEwiW5_PMgrPgAhUI77wKHdfiCfgQ_BIwEHoECAQQCA)があったので、写真撮った。
 
-<div class="img"><img src="/blog/images/11/10.jpg" alt=""></div>
+<div class="img"><img src="/images/11/10.jpg" alt=""></div>
 
 いろいろありすぎて、疲れたので朝まで爆睡。
