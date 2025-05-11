@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://tkskto.me',
+    site: 'https://blog.tkskto.me',
     outDir: './dist',
     trailingSlash: 'always',
     integrations: [
