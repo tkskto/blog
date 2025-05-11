@@ -2,7 +2,7 @@ const CACHE_KEY = '1.0.5';
 const CACHE_KEY_OLD = ['1.0.1', '1.0.2', '1.0.3', '1.0.4'];
 const OWN_DOMAIN = 'tkskto.me';
 const urlsToCache = [
-    '/blog/common/css/app.css',
+    '/common/css/app.css',
 ];
 
 self.addEventListener('install', (e) => {

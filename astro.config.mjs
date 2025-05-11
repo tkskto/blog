@@ -7,8 +7,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://tkskto.me',
-    base: '/blog',
-    outDir: './dist/blog',
+    outDir: './dist',
     trailingSlash: 'always',
     integrations: [
         tailwind({
