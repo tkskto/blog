@@ -25,10 +25,13 @@ const url = `https://tkskto.me/${pageTitle}/`;
         <meta name="twitter:card" content="summary_large_image">
         <meta property="og:site_name" content="So What!?">
         <meta name="twitter:creator" content="@tkskto">
-        <script>
+        <script is:inline>
             navigator.serviceWorker.register('/sw.js');
         </script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-18FD7QTMFP"></script>
+        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-18FD7QTMFP" />
+        <!-- Cloudflare Web Analytics -->
+        <script is:inline defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2c29a08363a14b0e860f6e1aa0b9fdb9"}' />
+        <!-- End Cloudflare Web Analytics -->
     </head>
     <body class="bg-slate-100">
     <div class="str-root-blog w-full min-h-full break-all p-8 bg-slate-100 text-neutral-900 leading-normal">
