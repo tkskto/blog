@@ -1,0 +1,20 @@
+---
+import BlogLayout from '../layout/blog.astro';
+import TheArticle from '../component/TheArticle.astro';
+---
+
+<BlogLayout pageTitle="" pageTitleElement="h1">
+    <TheArticle Element="h2" title="404 Not Found." date="1990-07-03">
+        <h3>404</h3>
+        
+        <p>画面に404って書かれても、ITに関わりのない人からなんのこっちゃって感じなのだろうか。HTTPのレスポンスコードくらいは情報の授業で習うのかな。自分はあまり記憶がない。</p>
+        
+        <p>ジェネレーションギャップってカルチャーに関するギャップに注目されがちだけど、その時代の教育によるギャップも大きいだろうとは思う。</p>
+        
+        <p>自分が知っていることを、周りの誰もが知っているとは思わない方がいい。ただあなたが知っているというだけのこと。</p>
+        
+        <p>果たしてこのページを見ているあなたは、このページがただの日記なのか、404ページなのか判断がつくだろうか。求めるものはここにはないだろうが、</p>
+
+        <p><a href="/"><code>gotoAndStop('home');</code></a></p>
+    </TheArticle>
+</BlogLayout>
