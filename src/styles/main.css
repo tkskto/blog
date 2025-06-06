@@ -39,6 +39,9 @@ html {
 .markdown p {
     @apply font-normal mb-8 text-2xl leading-loose;
 }
+.markdown math {
+    @apply font-normal mb-8 text-2xl;
+}
 .markdown table,
 .markdown th,
 .markdown td {
