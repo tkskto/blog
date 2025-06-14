@@ -20,7 +20,7 @@ export async function GET(context) {
             title: post.data.title,
             pubDate: post.data.publishDate,
             link: `/${post.data.title}/`,
-            content: marked.parse(post.body.replaceAll('src="/', `src="${context.site}/`).replaceAll('href="/', `href="${context.site}/`)),
+            content: marked.parse(post.body?.replaceAll('src="/', `src="${context.site}/`).replaceAll('href="/', `href="${context.site}/`) || ''),
         })),
         customData: '<language>ja-jp</language>',
     });

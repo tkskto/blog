@@ -1,7 +1,7 @@
 ---
 import {getCollection} from 'astro:content';
-import BlogLayout from '../layout/blog.astro';
-import TheArticle from '../component/TheArticle.astro';
+import BlogLayout from '@layout/blog.astro';
+import TheArticle from '@component/TheArticle.astro';
 const blogPost = await getCollection('blog', ({data}) => {
     return import.meta.env.PROD ? data.draft !== true : true;
 });

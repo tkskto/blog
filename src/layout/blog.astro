@@ -1,7 +1,7 @@
 ---
-import '../styles/main.css';
-import BlogName from '../component/BlogName.astro';
-import TheSidebar from '../component/TheSidebar.astro';
+import '@styles/main.css';
+import BlogName from '@component/BlogName.astro';
+import TheSidebar from '@component/TheSidebar.astro';
 
 const { pageTitle, pageTitleElement } = Astro.props;
 const title = pageTitle ? `${pageTitle} | So What!?` : 'So What!?'
