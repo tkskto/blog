@@ -1,7 +1,7 @@
 ---
 import {getCollection} from 'astro:content';
-import CategoryList from "./CategoryList.astro";
-import ArticleList from "./ArticleList.astro";
+import CategoryList from "@component/CategoryList.astro";
+import ArticleList from "@component/ArticleList.astro";
 const allPosts = await getCollection('blog', ({data}) => {
     return import.meta.env.PROD ? data.draft !== true : true;
 });

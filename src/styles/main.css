@@ -14,6 +14,11 @@ html {
 
 .markdown ul, .markdown ol {
     @apply mt-0 mr-0 mb-8 ml-8 text-2xl font-normal list-outside;
+    
+    ul,
+    ol {
+        @apply mb-0;
+    }
 }
 .markdown ul {
     @apply list-disc;
@@ -38,6 +43,9 @@ html {
 }
 .markdown p {
     @apply font-normal mb-8 text-2xl leading-loose;
+}
+.markdown math {
+    @apply font-normal mb-8 text-2xl;
 }
 .markdown table,
 .markdown th,
