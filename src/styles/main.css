@@ -85,3 +85,6 @@ html {
     padding: 10px;
     @apply my-2 text-xl mb-8;
 }
+.markdown iframe + * {
+    @apply mt-8;
+}
