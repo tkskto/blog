@@ -10,5 +10,10 @@
             "pattern": "blog.tkskto.me",
             "custom_domain": true
         }
+    ],
+    "tail_consumers": [
+        {
+            "service": "tail-worker"
+        }
     ]
 }
