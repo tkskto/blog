@@ -15,6 +15,7 @@ const blogCollection = defineCollection({
             z.literal('マネジメント'),
             z.literal('サウナ'),
             z.literal('音楽'),
+            z.literal('映画'),
         ])),
         draft: z.boolean().optional(),
     }),

@@ -68,6 +68,12 @@ html {
 .markdown hr {
     @apply mb-4;
 }
+.markdown table {
+    @apply max-w-6xl w-full mx-auto mb-6;
+}
+.markdown table + h3 {
+    @apply mt-12;
+}
 .markdown p code,
 .markdown li code {
     @apply bg-neutral-200 text-neutral-500 p-2;
