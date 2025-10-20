@@ -23,6 +23,7 @@
         "@astrojs/tailwind": "^6.0.2",
         "@sentry/astro": "^9.27.0",
         "astro": "^5.9.1",
+        "rehype-katex": "^7.0.1",
         "tailwindcss": "^3.4.17"
     },
     "devDependencies": {

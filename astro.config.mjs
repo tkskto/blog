@@ -1,6 +1,7 @@
 import {defineConfig} from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sentry from '@sentry/astro';
+import rehypeKatex from 'rehype-katex';
 
 import sitemap from '@astrojs/sitemap';
 
@@ -31,6 +32,14 @@ export default defineConfig({
             },
         }),
     ],
+    markdown: {
+        rehypePlugins: [
+            (...args) => rehypeKatex({
+                ...args,
+                output: 'mathml',
+            }),
+        ],
+    },
     vite: {
         build: {
             rollupOptions: {
