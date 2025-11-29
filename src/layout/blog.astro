@@ -1,5 +1,4 @@
 ---
-import '@styles/main.css';
 import BlogName from '@component/BlogName.astro';
 import TheSidebar from '@component/TheSidebar.astro';
 
@@ -8,46 +7,145 @@ const title = pageTitle ? `${pageTitle} | So What!?` : 'So What!?'
 const url = `https://tkskto.me/${pageTitle}/`;
 ---
 <html lang="ja">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="This is takeshi kato\'s Web blog." />
-        <meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
-        <link rel="manifest" type="manifest" href="/manifest.json" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <meta property="og:title" content={title}>
-        <meta property="og:description" content="This is takeshi kato\'s Web log.">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content={url}>
-        <meta property="og:image" content="https://tkskto.me/ogp.png">
-        <meta property="og:locale" content="ja_JP">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta property="og:site_name" content="So What!?">
-        <meta name="twitter:creator" content="@tkskto">
-        <script is:inline>
-            navigator.serviceWorker.register('/sw.js');
-        </script>
-        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-18FD7QTMFP" />
-        <!-- Cloudflare Web Analytics -->
-        <script is:inline defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2c29a08363a14b0e860f6e1aa0b9fdb9"}' />
-        <!-- End Cloudflare Web Analytics -->
-    </head>
-    <body class="bg-slate-100">
-    <div class="str-root-blog w-full min-h-full break-all p-8 bg-slate-100 text-neutral-900 leading-normal">
-        <div class="str-article">
-            <BlogName Element={pageTitleElement} />
-            <div class="flex md:flex-col max-w-prose mx-auto gap-16">
-                <TheSidebar />
-                <slot />
-            </div>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="This is takeshi kato\'s Web blog." />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="manifest" type="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content="This is takeshi kato\'s Web log.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={url}>
+    <meta property="og:image" content="https://tkskto.me/ogp.png">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:site_name" content="So What!?">
+    <meta name="twitter:creator" content="@tkskto">
+    <script is:inline>
+        navigator.serviceWorker.register('/sw.js');
+    </script>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-18FD7QTMFP" />
+    <!-- Cloudflare Web Analytics -->
+    <script is:inline defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2c29a08363a14b0e860f6e1aa0b9fdb9"}' />
+    <!-- End Cloudflare Web Analytics -->
+</head>
+<body class="bg-slate-100">
+<div class="str-root-blog w-full min-h-full break-all p-8 bg-slate-100 text-neutral-900 leading-normal">
+    <div class="str-article">
+        <BlogName Element={pageTitleElement} />
+        <div class="flex md:flex-col max-w-prose mx-auto gap-16">
+            <TheSidebar />
+            <slot />
         </div>
     </div>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-18FD7QTMFP');
-    </script>
-    </body>
+</div>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-18FD7QTMFP');
+</script>
+</body>
 </html>
+
+<style is:global>
+    html {
+        font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, YuGothic, "Hiragino Kaku Gothic", Meiryo, sans-serif;
+        font-size: 62.5%;
+        word-spacing: 1px;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+
+    .markdown ul, .markdown ol {
+        @apply mt-0 mr-0 mb-8 ml-8 text-2xl font-normal list-outside;
+
+        ul,
+        ol {
+            @apply mb-0;
+        }
+    }
+    .markdown ul {
+        @apply list-disc;
+    }
+    .markdown ol {
+        @apply list-decimal;
+    }
+    .markdown li  {
+        @apply leading-loose;
+    }
+    .markdown h2, .markdown h3, .markdown h4 {
+        @apply font-bold;
+    }
+    .markdown h2:not(.article-title) {
+        @apply text-4xl md:text-3xl font-bold mt-10 mb-12;
+    }
+    .markdown h3 {
+        @apply text-3xl md:text-2xl font-bold mt-6 mb-8;
+    }
+    .markdown h4 {
+        @apply text-2xl font-bold mt-4 mb-4;
+    }
+    .markdown p {
+        @apply font-normal mb-8 text-2xl leading-loose;
+    }
+    .markdown math {
+        @apply font-normal mb-8 text-2xl;
+    }
+    .markdown table,
+    .markdown th,
+    .markdown td {
+        @apply border bg-slate-50;
+    }
+    .markdown th,
+    .markdown td {
+        @apply font-normal mb-8 text-2xl leading-loose p-3;
+    }
+    .markdown a {
+        @apply text-blue-700 underline;
+    }
+    .markdown blockquote {
+        @apply mx-0 my-3 p-2;
+    }
+    .markdown blockquote p {
+        @apply p-4 mb-0 border-l-4 border-neutral-200 text-neutral-600;
+    }
+    .markdown hr {
+        @apply mb-4;
+    }
+    .markdown table {
+        @apply max-w-6xl w-full mx-auto mb-6;
+    }
+    .markdown table + h3 {
+        @apply mt-12;
+    }
+    .markdown p code,
+    .markdown li code {
+        @apply bg-neutral-200 text-neutral-500 p-2;
+    }
+    .markdown .img {
+        @apply max-w-6xl my-11 mx-auto mb-7;
+    }
+    .markdown .img img {
+        @apply mx-auto align-top;
+    }
+    .markdown .caption {
+        @apply block text-center mt-4;
+    }
+    .astro-code {
+        padding: 10px;
+        @apply my-2 text-xl mb-8;
+    }
+    .markdown iframe + * {
+        @apply mt-8;
+    }
+</style>

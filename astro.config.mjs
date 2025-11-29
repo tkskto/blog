@@ -4,11 +4,15 @@ import sentry from '@sentry/astro';
 
 import sitemap from '@astrojs/sitemap';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
     site: 'https://blog.tkskto.me',
     outDir: './dist',
     trailingSlash: 'always',
+    output: 'static',
+
     integrations: [
         tailwind({
             configFile: './tailwind.config.cjs',
@@ -31,6 +35,7 @@ export default defineConfig({
             },
         }),
     ],
+
     vite: {
         build: {
             rollupOptions: {
@@ -40,4 +45,11 @@ export default defineConfig({
             },
         },
     },
+
+    adapter: cloudflare({
+        platformProxy: {
+            enabled: true,
+        },
+        imageService: 'cloudflare',
+    }),
 });
