@@ -2,7 +2,7 @@
 let ArticleBody = '';
 
 try {
-    const response = await fetch('http://localhost:4321/index.json');
+    const response = await fetch(new URL('/index.json', Astro.url));
     const body = await response.text();
 
     ArticleBody = body;

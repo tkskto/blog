@@ -1,7 +1,6 @@
-import type {Fetcher, Ai} from '@cloudflare/workers-types';
+import type {Ai} from '@cloudflare/workers-types';
 
 interface Env {
-    ASSETS: Fetcher;
     AI: Ai
 }
 

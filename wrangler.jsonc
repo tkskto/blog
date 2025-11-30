@@ -3,7 +3,7 @@
     "compatibility_date": "2025-06-15",
     "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
 
-	"main": "./dist/_worker.js/index.js",
+    "main": "./dist/_worker.js/index.js",
     
     "assets": {
         "directory": "./dist/",
@@ -20,6 +20,7 @@
             "custom_domain": true
         }
     ],
+
     "tail_consumers": [
         {
             "service": "tail-worker"
