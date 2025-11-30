@@ -1,53 +1,15 @@
 ---
 export const prerender = false;
 
-import {getCollection} from 'astro:content';
 import BlogLayout from '@layout/blog.astro';
 import TheArticle from '@component/TheArticle.astro';
-
-let articlePublishDate = new Date();
-let articleTitle = '記事作成中…';
-let ArticleBody = '記事作成中…';
-let isAiGenerated = false;
-
-try {
-    const response = await fetch('http://localhost:4321/index.json');
-   
-    if (!response.ok) {
-        throw Error();
-    }
-    
-    const {title, body} = await response.json();
-
-    isAiGenerated = true;
-    articleTitle = title;
-    ArticleBody = body;
-} catch {
-    const blogPost = await getCollection('blog', ({data}) => {
-        return import.meta.env.PROD ? data.draft !== true : true;
-    });
-
-    const sorted = blogPost.sort((post1, post2) => new Date(post2.data.publishDate).getTime() - new Date(post1.data.publishDate).getTime());
-    const [latest] = sorted;
-    const {title, publishDate} = latest.data;
-    const {Content} = await latest.render();
-
-    articlePublishDate = publishDate;
-    articleTitle = title;
-    ArticleBody = Content;
-}
+import Contents from './_components/contents.astro';
 ---
 
 <BlogLayout pageTitle="" pageTitleElement="h1">
-    <TheArticle Element="h2" title={articleTitle} date={articlePublishDate}>
-        {
-            isAiGenerated ? (
-                <p><strong>この記事はAIによってSSRで作成されています。全く信憑性がないので、注意してください。</strong></p>
-        
-                <Fragment set:html={ArticleBody} />                
-            ) : (
-                <ArticleBody />
-            )
-        }
+    <TheArticle Element="h2" title={'AIによる記事生成の実験'} date={new Date()}>
+        <Contents server:defer>
+            <p slot="fallback">記事生成中...</p>
+        </Contents>
     </TheArticle>
 </BlogLayout>

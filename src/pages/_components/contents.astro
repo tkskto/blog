@@ -1,0 +1,16 @@
+---
+let ArticleBody = '';
+
+try {
+    const response = await fetch('http://localhost:4321/index.json');
+    const body = await response.text();
+
+    ArticleBody = body;
+} catch (error) {
+    ArticleBody = `<h2>記事の生成に失敗しました。</h2><p>${error.message}</p>`;
+}
+---
+
+<p><strong>この記事はAIに書かせており、信ぴょう性はないのでご注意ください。</strong></p>
+
+<Fragment set:html={ArticleBody}/>
