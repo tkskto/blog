@@ -1,0 +1,25 @@
+---
+import sanitizeHtml from 'sanitize-html';
+
+let articleBody = '';
+
+try {
+    const response = await fetch(new URL('/index.json', Astro.url));
+    const body = await response.text();
+
+    articleBody = sanitizeHtml(body, {
+        allowedTags: ['h2','h3','h4','h5','h6','p','ul','ol','li','strong','em','code','pre','blockquote','br','hr'],
+        allowProtocolRelative: false,
+    });
+} catch (error) {
+    articleBody = `<h2>記事の生成に失敗しました。</h2><p>時間をおいて再度お試しください。</p>`;
+}
+---
+
+<p><strong>この記事はAIに書かせています。リロードすると別の内容に書き換えられます。信ぴょう性もないですし、URLをだれかに共有しても内容自体の共有はできないのでご注意ください。</strong></p>
+
+仕組み自体は[Cloudflare AI Searchを使う](/Cloudflare AI Searchを使う.html)という記事にまとめています。
+
+---
+
+<Fragment set:html={articleBody}/>
