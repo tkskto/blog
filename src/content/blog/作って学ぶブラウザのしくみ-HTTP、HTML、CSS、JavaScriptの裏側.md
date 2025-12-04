@@ -113,7 +113,7 @@ profile = "default" # Rustツールチェーンのインストール方法（min
 
 `RefCell<T>`は可変参照の制約をランタイムでチェックするスマートポインタで、`Rc<T>`内のような`mut`が使えない状況でも、データを変更できるようになる。
 
-```rust
+```rs
 use std::cell::RefCell;
 
 fn main() {
@@ -137,7 +137,7 @@ Rustでは「値が存在しない」という概念を安全に扱うために`
 
 以下のような関係になる。
 
-```rust
+```rs
 enum Option<T> {
     Some(T), // 値があるとき
     None,    // 値がないとき
@@ -146,21 +146,21 @@ enum Option<T> {
 
 `Option<T>`から値を取り出すには`unwrap()`を使う：
 
-```rust
+```rs
 let x: Option<i32> = Some(10);
 println!("{}", x.unwrap()); // Output: 10
 ```
 
 `None`に対して`unwrap()`するとクラッシュするので`unwかんけいせいap_or()`を使うこともできる。
 
-```rust
+```rs
 let y: Option<i32> = None;
 println!("{}", y.unwrap_or(0)); // Output: 0
 ```
 
 Rustでは`match`で安全に処理するのが基本らしい。
 
-```rust
+```rs
 fn divide(a: i32, b: i32) -> Option<i32> {
     if b == 0 {
         None // 0 で割るのはエラーなので None を返す
@@ -182,7 +182,7 @@ fn main() {
 
 `if let`でシンプルに書くこともできる。
 
-```rust
+```rs
 let x: Option<i32> = Some(42);
 
 // xに値がある場合は値を`value`という名前で取り出す
@@ -213,7 +213,7 @@ enum Result<T, E> {
 
 `Option`と同様に`Result`の値は`unwrap()`で取り出す。`switch`文で安全に取り出すのが基本。
 
-```rust
+```rs
 fn divide(a: i32, b: i32) -> Result<i32, String> {
     if b == 0 {
         Err("0で割ることはできません".to_string())

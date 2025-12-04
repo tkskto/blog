@@ -46,6 +46,10 @@ export default defineConfig({
         },
     },
 
+    build: {
+        inlineStylesheets: 'always',
+    },
+
     adapter: cloudflare({
         platformProxy: {
             enabled: true,
