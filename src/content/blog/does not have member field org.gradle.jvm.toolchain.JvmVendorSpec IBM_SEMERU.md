@@ -2,7 +2,6 @@
 title: "does not have member field 'org.gradle.jvm.toolchain.JvmVendorSpec IBM_SEMERU'"
 publishDate: 2025-09-21
 tags: ['エンジニアリング']
-draft: true
 ---
 
 JetBrainsのコード品質ツールである[Qodana](https://www.jetbrains.com/ja-jp/qodana/)を使い、Kotlin/Gradleプロジェクトの静的解析を自動化しようとした際にビルドエラーに遭遇したのでメモ。
@@ -44,7 +43,7 @@ IBM_ SEMERUはIBM社が開発しているJDK（Java Development Kit）ディス�
 
 ## foojay-resolver-convention
 
-foojayはどのベンダー（Adoptium、Oracle、Azulなど）が、どのバージョン、どのアーキテクチャで提供しているかを一覧にしている[Disco API](https://github.com/foojayio/discoapi)を公開しています。
+foojayはどのベンダー（Adoptium、Oracle、Azulなど）が、どのバージョン、どのアーキテクチャで提供しているかを一覧にしている[Disco API](https://github.com/foojayio/discoapi)を公開している。
 
 Gradleのプラグインであるorg.gradle.toolchains.foojay-resolverは、このDisco APIを使ってツールチェーンの候補を取得し、「要件に合うJDKをダウンロードして使う」設定を自動でやってくれる。
 
