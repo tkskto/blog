@@ -4,6 +4,8 @@ interface Env {
     AI: Ai
 }
 
+export const prerender = false;
+
 export async function GET(context) {
     const {env} = context.locals.runtime;
 
