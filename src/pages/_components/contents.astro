@@ -4,7 +4,7 @@ import sanitizeHtml from 'sanitize-html';
 let articleBody = '';
 
 try {
-    const response = await fetch(new URL('/index.json', Astro.url));
+    const response = await fetch(new URL('/index.txt', Astro.url));
     const body = await response.text();
 
     articleBody = sanitizeHtml(body, {
