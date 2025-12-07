@@ -51,12 +51,14 @@ RAGを作る時に、R2を指定すると、[Cloudflare Vectorize](https://devel
 Astroの[Endpoint](https://docs.astro.build/ja/guides/endpoints/)は[Cloudflareのランタイム](https://docs.astro.build/en/guides/integrations-guide/cloudflare/#cloudflare-runtime)にアクセスができるので、そこからAI Searchを動かす。
 
 ```typescript
-// index.json.ts
+// index.txt.ts
 import type {Ai} from '@cloudflare/workers-types';
 
 interface Env {
     AI: Ai
 }
+
+export const prerender = false;
 
 export async function GET(context) {
     const {env} = context.locals.runtime;
@@ -94,7 +96,7 @@ export async function GET(context) {
 let ArticleBody = '';
 
 try {
-    const response = await fetch(new URL('/index.json', Astro.url));
+    const response = await fetch(new URL('/index.txt', Astro.url));
     const body = await response.text();
 
     ArticleBody = body;
