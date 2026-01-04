@@ -6,7 +6,7 @@ posts.forEach((articleData) => {
     const {tags} = articleData.data;
 
     tags.forEach((tag) => {
-        if (!categoryList.includes(tag)) {
+        if (!categoryList.includes(tag) && tag !== "ボイスメモ") {
             categoryList.push(tag);
         }
     });

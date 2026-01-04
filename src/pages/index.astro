@@ -5,7 +5,7 @@ import Contents from './_components/contents.astro';
 ---
 
 <BlogLayout pageTitle="" pageTitleElement="h1">
-    <TheArticle Element="h2" title={'AIによる記事生成の実験'} date={new Date()}>
+    <TheArticle Element="h2" title={'AIによる記事生成の実験'} date={new Date()} tags={[]}>
         <Contents server:defer>
             <p slot="fallback">記事生成中...（10秒くらいかかるかもしれません。）</p>
         </Contents>
