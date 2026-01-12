@@ -5,11 +5,15 @@ import rehypeKatex from 'rehype-katex';
 
 import sitemap from '@astrojs/sitemap';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
     site: 'https://blog.tkskto.me',
     outDir: './dist',
     trailingSlash: 'always',
+    output: 'static',
+
     integrations: [
         tailwind({
             configFile: './tailwind.config.cjs',
@@ -32,6 +36,7 @@ export default defineConfig({
             },
         }),
     ],
+
     markdown: {
         rehypePlugins: [
             (...args) => rehypeKatex({
@@ -40,6 +45,7 @@ export default defineConfig({
             }),
         ],
     },
+
     vite: {
         build: {
             rollupOptions: {
@@ -49,4 +55,15 @@ export default defineConfig({
             },
         },
     },
+
+    build: {
+        inlineStylesheets: 'always',
+    },
+
+    adapter: cloudflare({
+        platformProxy: {
+            enabled: true,
+        },
+        imageService: 'cloudflare',
+    }),
 });

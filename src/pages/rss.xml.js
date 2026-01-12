@@ -4,7 +4,7 @@ import {marked} from 'marked';
 
 export async function GET(context) {
     const blogPost = await getCollection('blog', ({data}) => {
-        return import.meta.env.PROD ? data.draft !== true : true;
+        return import.meta.env.PROD ? data.draft !== true && !data.tags.includes('ボイスメモ') : true;
     });
 
     const sortedBlogPost = blogPost.sort((post1, post2) => new Date(post2.data.publishDate).getTime() - new Date(post1.data.publishDate).getTime());

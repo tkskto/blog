@@ -1,0 +1,44 @@
+name: Upload Markdown to Cloudflare R2
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/content/blog/**/*.md'
+      - '.github/workflows/r2-upload.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: r2-upload-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    environment: production
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install deps (root)
+        run: npm ci --omit=dev
+
+      - name: R2 Upload Action
+        uses: ryand56/r2-upload-action@v1.4
+        with:
+            r2-account-id: ${{ secrets.R2_ACCOUNT_ID }}
+            r2-access-key-id: ${{ secrets.R2_ACCESS_KEY_ID }}
+            r2-secret-access-key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+            r2-bucket: ${{ secrets.R2_BUCKET_NAME }}
+            source-dir: src/content/blog
+            destination-dir: ./
+

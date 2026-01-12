@@ -1,13 +1,15 @@
 ---
-const {title, date, Element = 'h1'} = Astro.props;
+const {title, date, tags, Element = 'h1'} = Astro.props;
 const dateObject = new Date(date);
 const dateText = `${dateObject.getFullYear()}年${dateObject.getMonth() + 1}月${dateObject.getDate()}日`;
+const dateString = `${dateObject.getFullYear()}-${String(dateObject.getMonth() + 1).padStart(2, '0')}-${String(dateObject.getDate()).padStart(2, '0')}`;
 ---
 
 <article class="p-4 order-1 w-3/4 leading-relaxed md:p-0 md:w-full">
     <section class="block markdown">
         <Element class="text-4xl leading-relaxed border-b border-neutral-700 mt-0 mb-6 md:text-3xl md:leading-relaxed article-title">{title}</Element>
         <p class="text-right text-neutral-700 mb-16">{dateText}</p>
+        {tags && tags.includes('ボイスメモ') && <audio class="mb-16 w-full" controls src={`/audio/${dateString}.mp3`} />}
         <slot />
     </section>
 </article>

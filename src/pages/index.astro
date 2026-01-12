@@ -1,19 +1,13 @@
 ---
-import {getCollection} from 'astro:content';
 import BlogLayout from '@layout/blog.astro';
 import TheArticle from '@component/TheArticle.astro';
-const blogPost = await getCollection('blog', ({data}) => {
-    return import.meta.env.PROD ? data.draft !== true : true;
-});
-
-const sorted = blogPost.sort((post1, post2) => new Date(post2.data.publishDate).getTime() - new Date(post1.data.publishDate).getTime());
-const [latest] = sorted;
-const {title, publishDate} = latest.data;
-const {Content} = await latest.render();
+import Contents from './_components/contents.astro';
 ---
 
 <BlogLayout pageTitle="" pageTitleElement="h1">
-    <TheArticle Element="h2" title={title} date={publishDate}>
-        <Content />
+    <TheArticle Element="h2" title={'AIによる記事生成の実験'} date={new Date()} tags={[]}>
+        <Contents server:defer>
+            <p slot="fallback">記事生成中...（10秒くらいかかるかもしれません。）</p>
+        </Contents>
     </TheArticle>
 </BlogLayout>
